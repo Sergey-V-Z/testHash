@@ -60,6 +60,20 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define RST_ASIC_Pin GPIO_PIN_11
 #define RST_ASIC_GPIO_Port GPIOA
+#define B1_Pin GPIO_PIN_15
+#define B1_GPIO_Port GPIOA
+#define B2_Pin GPIO_PIN_10
+#define B2_GPIO_Port GPIOC
+#define B3_Pin GPIO_PIN_11
+#define B3_GPIO_Port GPIOC
+#define PLUG_Pin GPIO_PIN_12
+#define PLUG_GPIO_Port GPIOC
+#define A1_Pin GPIO_PIN_0
+#define A1_GPIO_Port GPIOD
+#define A0_Pin GPIO_PIN_1
+#define A0_GPIO_Port GPIOD
+#define A2_Pin GPIO_PIN_2
+#define A2_GPIO_Port GPIOD
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
@@ -69,5 +83,3 @@ void Error_Handler(void);
 #endif
 
 #endif /* __MAIN_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -1,2 +1,4 @@
 start
 status_i2c
+counter_ASIC
+readASIC

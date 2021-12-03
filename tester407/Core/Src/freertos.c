@@ -49,12 +49,13 @@
 extern I2C_HandleTypeDef hi2c1;
 extern I2C_HandleTypeDef hi2c3;
 extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart6;
 
 HAL_StatusTypeDef status_i2c;
 HAL_StatusTypeDef status_uart;
 
 //счетчик чипов
-uint8_t counter_ASIC = 0;
+uint32_t counter_ASIC = 0;
 uint8_t readASIC[540] = { 0x00 };
 uint8_t start = 0;
 
@@ -146,7 +147,8 @@ void TestTask(void const * argument)
   /* USER CODE BEGIN TestTask */
 
 	//команды i2c
-	uint16_t addr = 0x40;
+	uint16_t addr = 0x20;
+	addr = addr<<1;
 
 	uint8_t cmdStart_1[6] = { 0x55, 0xAA, 0x04, 0x07, 0x00, 0x0B };
 	uint8_t cmdRead_1[2] = { 0x00 };
@@ -161,42 +163,70 @@ void TestTask(void const * argument)
 	uint8_t cmdRead_4[2] = { 0x00 };
 
 	uint8_t cmdStop[7] = { 0x55, 0xAA, 0x05, 0x15, 0x00, 0x00, 0x1A };
-	uint8_t cmdRead_stop[2] = { 0x00};
+	uint8_t cmdRead_stop[2] = { 0x00 };
 
-	uint8_t read_data[2] = { 0x00 };
 
 	//команды uart
 	uint8_t cmdASIC[7] = { 0x55, 0xAA, 0x52, 0x05, 0x00, 0x00, 0x0A };
+	GPIO_PinState plug = 0;
 
+	HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(A0_GPIO_Port, A0_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(A1_GPIO_Port, A1_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(A2_GPIO_Port, A2_Pin, GPIO_PIN_RESET);
 
+	plug = HAL_GPIO_ReadPin(PLUG_GPIO_Port, PLUG_Pin);
 	/* Infinite loop */
 	for (;;) {
 		if (start) {
+			counter_ASIC = 0;
+			HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_RESET);
+			osDelay(4);
 			start = 0;
 
 			status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_1, 6, 20);
 			osDelay(410);
-			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, cmdRead_1, 2, 20);
+			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_1[0], 1, 20);
+			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_1[1], 1, 20);
 			osDelay(610);
 
 			status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_2, 6, 20);
 			osDelay(410);
-			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, cmdRead_2, 2, 20);
+			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_2[0], 1, 20);
+			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_2[1], 1, 20);
 			osDelay(2210);
 
 			status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_3, 9, 20);
 			osDelay(110);
-			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, cmdRead_3, 2, 20);
+			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_3[0], 1, 20);
+			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_3[1], 1, 20);
 			osDelay(2210);
 
 			status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_4, 7, 20);
 			osDelay(710);
-			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, cmdRead_4, 2, 20);
+			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_4[0], 1, 20);
+			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_4[1], 1, 20);
 
 			osDelay(2100);
 
-			status_uart = HAL_UART_Receive_IT(&huart1, readASIC, 9);
+			HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_SET);
+			osDelay(1200);
+			HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_RESET);
+			osDelay(500);
+			HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_SET);
+			osDelay(500);
+
+			status_uart = HAL_UART_Receive_IT(&huart6, readASIC, 1);
 			status_uart = HAL_UART_Transmit(&huart1, cmdASIC, 7, 20);
+
+			osDelay(5000);
+
+			HAL_UART_AbortReceive(&huart6);
+
+			status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStop, 7, 20);
+			osDelay(20);
+			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_stop[0], 1, 20);
+			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_stop[1], 1, 20);
 	}
 	//osDelay(1);
 }
@@ -213,8 +243,12 @@ void TestTask(void const * argument)
 void LCDTask(void const * argument)
 {
   /* USER CODE BEGIN LCDTask */
+	uint16_t addr = 0x78;
 /* Infinite loop */
 for (;;) {
+	//if (condition) {
+	//	status_i2c = HAL_I2C_Master_Transmit(&hi2c3, (addr <<1), &cmdStart_1[0], 1, 20);
+	//}
 	osDelay(1);
 }
   /* USER CODE END LCDTask */
@@ -224,9 +258,7 @@ for (;;) {
 /* USER CODE BEGIN Application */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 
-	status_uart = HAL_UART_Receive_IT(&huart1, readASIC+(9*counter_ASIC), 9);
+	status_uart = HAL_UART_Receive_IT(&huart6, &readASIC[counter_ASIC], 1);
 	counter_ASIC++;
 }
 /* USER CODE END Application */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
