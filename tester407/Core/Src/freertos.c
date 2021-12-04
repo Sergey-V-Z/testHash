@@ -26,7 +26,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -50,19 +50,20 @@ extern I2C_HandleTypeDef hi2c1;
 extern I2C_HandleTypeDef hi2c3;
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart6;
+extern TIM_HandleTypeDef htim14;
 
 HAL_StatusTypeDef status_i2c;
 HAL_StatusTypeDef status_uart;
 
 //счетчик чипов
-uint32_t counter_ASIC = 0;
+uint32_t pre_count_ASIC = 0;
+uint32_t counter_bytes = 0;
 uint8_t readASIC[540] = { 0x00 };
 uint8_t start = 0;
 
 /* USER CODE END Variables */
 osThreadId testTaskHandle;
 osThreadId lcdTaskHandle;
-osMutexId allASICHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -99,10 +100,6 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
-  /* Create the mutex(es) */
-  /* definition and creation of allASIC */
-  osMutexDef(allASIC);
-  allASICHandle = osMutexCreate(osMutex(allASIC));
 
   /* USER CODE BEGIN RTOS_MUTEX */
 	/* add mutexes, ... */
@@ -150,20 +147,27 @@ void TestTask(void const * argument)
 	uint16_t addr = 0x20;
 	addr = addr<<1;
 
+	uint32_t startTimer = 0;
+	uint32_t timeOut = 3000;
+
 	uint8_t cmdStart_1[6] = { 0x55, 0xAA, 0x04, 0x07, 0x00, 0x0B };
-	uint8_t cmdRead_1[2] = { 0x00 };
+	uint8_t cmdRead_1[2] = { 0x00 };// 0x07 0x01
 
 	uint8_t cmdStart_2[6] = { 0x55, 0xAA, 0x04, 0x06, 0x00, 0x0A };
-	uint8_t cmdRead_2[2] = { 0x00 };
+	uint8_t cmdRead_2[2] = { 0x00 };// 0x06 0x01
 
 	uint8_t cmdStart_3[9] = { 0x55, 0xAA, 0x07, 0x10, 0x19, 0x00, 0x00, 0x00, 0x30 };
-	uint8_t cmdRead_3[2] = { 0x00 };
+	uint8_t cmdRead_3[2] = { 0x00 };// 0x10 0x01
 
 	uint8_t cmdStart_4[7] = { 0x55, 0xAA, 0x05, 0x15, 0x01, 0x00, 0x1B };
-	uint8_t cmdRead_4[2] = { 0x00 };
+	uint8_t cmdRead_4[2] = { 0x00 };// 0x15 0x01
 
 	uint8_t cmdStop[7] = { 0x55, 0xAA, 0x05, 0x15, 0x00, 0x00, 0x1A };
-	uint8_t cmdRead_stop[2] = { 0x00 };
+	uint8_t cmdRead_stop[2] = { 0x00 };// 0x15 0x01
+
+	uint8_t cmdRefresh[6] = { 0x55, 0xAA, 0x04, 0x16, 0x00, 0x1A };
+	uint8_t cmdRead_Refresh[6] = { 0x00 };// 0x06 0x16 0x01 0x00 0x00 0x1D
+
 
 
 	//команды uart
@@ -176,52 +180,79 @@ void TestTask(void const * argument)
 	HAL_GPIO_WritePin(A2_GPIO_Port, A2_Pin, GPIO_PIN_RESET);
 
 	plug = HAL_GPIO_ReadPin(PLUG_GPIO_Port, PLUG_Pin);
+
 	/* Infinite loop */
 	for (;;) {
 		if (start) {
-			counter_ASIC = 0;
+			counter_bytes = 0;
 			HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_RESET);
 			osDelay(4);
 			start = 0;
 
 			status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_1, 6, 20);
-			osDelay(410);
+			osDelay(200);
 			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_1[0], 1, 20);
 			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_1[1], 1, 20);
-			osDelay(610);
+			osDelay(300);
 
 			status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_2, 6, 20);
-			osDelay(410);
+			osDelay(200);
 			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_2[0], 1, 20);
 			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_2[1], 1, 20);
-			osDelay(2210);
+			osDelay(1000);
 
 			status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_3, 9, 20);
-			osDelay(110);
+			osDelay(100);
 			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_3[0], 1, 20);
 			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_3[1], 1, 20);
-			osDelay(2210);
+			osDelay(1000);
 
 			status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_4, 7, 20);
 			osDelay(710);
 			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_4[0], 1, 20);
 			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_4[1], 1, 20);
 
-			osDelay(2100);
+			//старт таймера для обновления пика
+			startTimer = HAL_GetTick();
+
+			osDelay(1000);
 
 			HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_SET);
 			osDelay(1200);
-			HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_RESET);
-			osDelay(500);
-			HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_SET);
-			osDelay(500);
 
-			status_uart = HAL_UART_Receive_IT(&huart6, readASIC, 1);
-			status_uart = HAL_UART_Transmit(&huart1, cmdASIC, 7, 20);
 
-			osDelay(5000);
+			//цикл опроса
+			for (int var = 0; var < 100; ++var) {
 
-			HAL_UART_AbortReceive(&huart6);
+				//сброс асиков
+				HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_RESET);
+				osDelay(500);
+				HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_SET);
+				osDelay(500);
+
+				status_uart = HAL_UART_Receive_IT(&huart6, readASIC, 1);
+				status_uart = HAL_UART_Transmit(&huart1, cmdASIC, 7, 20);
+
+				osDelay(150);
+
+				HAL_UART_AbortReceive(&huart6);
+
+				//посчитать количесво асиков
+				pre_count_ASIC = counter_bytes / 9;
+				counter_bytes = 0;
+				memset(readASIC, 0, sizeof readASIC);
+
+				//подать команду на пик что бы не отключил питание
+				osDelay(200);
+
+				// создать програмный таймер который будет обновлять пик и обновлять пик тут
+				if ((startTimer-HAL_GetTick()) <= timeOut) {
+					//обновляем пик
+					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, , 6, 20);
+					osDelay(200);
+					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, , 6, 20);
+				}
+			}
 
 			status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStop, 7, 20);
 			osDelay(20);
@@ -243,7 +274,7 @@ void TestTask(void const * argument)
 void LCDTask(void const * argument)
 {
   /* USER CODE BEGIN LCDTask */
-	uint16_t addr = 0x78;
+	//uint16_t addr = 0x78;
 /* Infinite loop */
 for (;;) {
 	//if (condition) {
@@ -258,7 +289,8 @@ for (;;) {
 /* USER CODE BEGIN Application */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 
-	status_uart = HAL_UART_Receive_IT(&huart6, &readASIC[counter_ASIC], 1);
-	counter_ASIC++;
+	status_uart = HAL_UART_Receive_IT(&huart6, &readASIC[counter_bytes], 1);
+	counter_bytes++;
 }
+
 /* USER CODE END Application */

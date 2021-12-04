@@ -1,4 +1,5 @@
 start
 status_i2c
-counter_ASIC
 readASIC
+pre_count_ASIC
+counter_bytes
