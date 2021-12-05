@@ -61,9 +61,16 @@ uint32_t counter_bytes = 0;
 uint8_t readASIC[540] = { 0x00 };
 uint8_t start = 0;
 
+//переменные для таймеров
+extern uint32_t uartTIM ;
+extern uint8_t status_uartTIM;
+extern uint32_t i2cTIM;
+extern uint8_t status_i2cTIM;
+
 /* USER CODE END Variables */
 osThreadId testTaskHandle;
 osThreadId lcdTaskHandle;
+osThreadId I2C_TaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -72,6 +79,7 @@ osThreadId lcdTaskHandle;
 
 void TestTask(void const * argument);
 void LCDTask(void const * argument);
+void i2c_Task(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -126,6 +134,10 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(lcdTask, LCDTask, osPriorityNormal, 0, 256);
   lcdTaskHandle = osThreadCreate(osThread(lcdTask), NULL);
 
+  /* definition and creation of I2C_Task */
+  osThreadDef(I2C_Task, i2c_Task, osPriorityNormal, 0, 128);
+  I2C_TaskHandle = osThreadCreate(osThread(I2C_Task), NULL);
+
   /* USER CODE BEGIN RTOS_THREADS */
 	/* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -147,8 +159,8 @@ void TestTask(void const * argument)
 	uint16_t addr = 0x20;
 	addr = addr<<1;
 
-	uint32_t startTimer = 0;
-	uint32_t timeOut = 3000;
+	uint32_t timeOutUART = 50;
+	uint32_t timeOutI2C = 3000;
 
 	uint8_t cmdStart_1[6] = { 0x55, 0xAA, 0x04, 0x07, 0x00, 0x0B };
 	uint8_t cmdRead_1[2] = { 0x00 };// 0x07 0x01
@@ -213,7 +225,7 @@ void TestTask(void const * argument)
 			status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_4[1], 1, 20);
 
 			//старт таймера для обновления пика
-			startTimer = HAL_GetTick();
+			status_i2cTIM = 1;
 
 			osDelay(1000);
 
@@ -233,8 +245,14 @@ void TestTask(void const * argument)
 				status_uart = HAL_UART_Receive_IT(&huart6, readASIC, 1);
 				status_uart = HAL_UART_Transmit(&huart1, cmdASIC, 7, 20);
 
-				osDelay(150);
-
+				//osDelay(150);
+				//запускаем таймер
+				status_uartTIM = 1;
+				// ожидать таймаута по уарту
+				while(uartTIM < timeOutUART){
+					osDelay(1);
+				}
+				// все данные пришли отключаем уарт
 				HAL_UART_AbortReceive(&huart6);
 
 				//посчитать количесво асиков
@@ -246,11 +264,11 @@ void TestTask(void const * argument)
 				osDelay(200);
 
 				// создать програмный таймер который будет обновлять пик и обновлять пик тут
-				if ((startTimer-HAL_GetTick()) <= timeOut) {
+				if (i2cTIM <= timeOutI2C) {
 					//обновляем пик
-					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, , 6, 20);
+					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdRefresh, 6, 20);
 					osDelay(200);
-					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, , 6, 20);
+					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, cmdRead_Refresh, 6, 20);
 				}
 			}
 
@@ -285,12 +303,31 @@ for (;;) {
   /* USER CODE END LCDTask */
 }
 
+/* USER CODE BEGIN Header_i2c_Task */
+/**
+* @brief Function implementing the I2C_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_i2c_Task */
+void i2c_Task(void const * argument)
+{
+  /* USER CODE BEGIN i2c_Task */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END i2c_Task */
+}
+
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 
 	status_uart = HAL_UART_Receive_IT(&huart6, &readASIC[counter_bytes], 1);
 	counter_bytes++;
+	uartTIM = 0; //сбрасываем таймер до тех пор пока не придут все данные
 }
 
 /* USER CODE END Application */

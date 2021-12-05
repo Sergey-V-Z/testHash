@@ -1,16 +1,10 @@
-19:00:18 **** Incremental Build of configuration Debug for project tester407 ****
+17:05:26 **** Incremental Build of configuration Debug for project tester407 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
 ../Core/Src/freertos.c: In function 'TestTask':
-../Core/Src/freertos.c:172:16: warning: variable 'plug' set but not used [-Wunused-but-set-variable]
-  172 |  GPIO_PinState plug = 0;
+../Core/Src/freertos.c:181:16: warning: variable 'plug' set but not used [-Wunused-but-set-variable]
+  181 |  GPIO_PinState plug = 0;
       |                ^~~~
-../Core/Src/freertos.c:166:10: warning: unused variable 'cmdRead_Refresh' [-Wunused-variable]
-  166 |  uint8_t cmdRead_Refresh[6] = { 0x00 };// 0x06 0x16 0x01 0x00 0x00 0x1D
-      |          ^~~~~~~~~~~~~~~
-../Core/Src/freertos.c:165:10: warning: unused variable 'cmdRefresh' [-Wunused-variable]
-  165 |  uint8_t cmdRefresh[6] = { 0x55, 0xAA, 0x04, 0x16, 0x00, 0x1A };
-      |          ^~~~~~~~~~
 arm-none-eabi-gcc -o "tester407.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Radio\Project\testHash\tester407\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tester407.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: tester407.elf
  
@@ -18,7 +12,7 @@ arm-none-eabi-size   tester407.elf
 arm-none-eabi-objdump -h -S  tester407.elf  > "tester407.list"
 arm-none-eabi-objcopy  -O binary  tester407.elf  "tester407.bin"
    text	   data	    bss	    dec	    hex	filename
-  31172	    124	  18924	  50220	   c42c	tester407.elf
+  31380	    124	  18940	  50444	   c50c	tester407.elf
 Finished building: default.size.stdout
  
 Finished building: tester407.bin
@@ -26,5 +20,5 @@ Finished building: tester407.bin
 Finished building: tester407.list
  
 
-19:00:21 Build Finished. 0 errors, 3 warnings. (took 3s.28ms)
+17:05:27 Build Finished. 0 errors, 1 warnings. (took 969ms)
 

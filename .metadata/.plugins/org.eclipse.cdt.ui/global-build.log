@@ -2161,3 +2161,144 @@ Finished building: tester407.bin
  
 Finished building: tester407.list
  
+17:00:14 **** Incremental Build of configuration Debug for project tester407 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:51:17: warning: 'uartTIM' initialized and declared 'extern'
+   51 | extern uint32_t uartTIM = 0;
+      |                 ^~~~~~~
+../Core/Src/main.c:52:16: warning: 'status_uartTIM' initialized and declared 'extern'
+   52 | extern uint8_t status_uartTIM = 0;
+      |                ^~~~~~~~~~~~~~
+../Core/Src/main.c:53:17: warning: 'i2cTIM' initialized and declared 'extern'
+   53 | extern uint32_t i2cTIM = 0;
+      |                 ^~~~~~
+../Core/Src/main.c:54:16: warning: 'status_i2cTIM' initialized and declared 'extern'
+   54 | extern uint8_t status_i2cTIM = 0;
+      |                ^~~~~~~~~~~~~
+../Core/Src/freertos.c: In function 'TestTask':
+../Core/Src/freertos.c:261:10: error: 'startTimer' undeclared (first use in this function)
+  261 |     if ((startTimer-HAL_GetTick()) <= timeOut) {
+      |          ^~~~~~~~~~
+../Core/Src/freertos.c:261:10: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/freertos.c:261:39: error: 'timeOut' undeclared (first use in this function); did you mean 'timeOutI2C'?
+  261 |     if ((startTimer-HAL_GetTick()) <= timeOut) {
+      |                                       ^~~~~~~
+      |                                       timeOutI2C
+../Core/Src/freertos.c:263:57: error: expected expression before ',' token
+  263 |      status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, , 6, 20);
+      |                                                         ^
+../Core/Src/freertos.c:265:56: error: expected expression before ',' token
+  265 |      status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, , 6, 20);
+      |                                                        ^
+../Core/Src/freertos.c:181:16: warning: variable 'plug' set but not used [-Wunused-but-set-variable]
+  181 |  GPIO_PinState plug = 0;
+      |                ^~~~
+../Core/Src/freertos.c:175:10: warning: unused variable 'cmdRead_Refresh' [-Wunused-variable]
+  175 |  uint8_t cmdRead_Refresh[6] = { 0x00 };// 0x06 0x16 0x01 0x00 0x00 0x1D
+      |          ^~~~~~~~~~~~~~~
+../Core/Src/freertos.c:174:10: warning: unused variable 'cmdRefresh' [-Wunused-variable]
+  174 |  uint8_t cmdRefresh[6] = { 0x55, 0xAA, 0x04, 0x16, 0x00, 0x1A };
+      |          ^~~~~~~~~~
+../Core/Src/freertos.c:157:11: warning: unused variable 'timeOutI2C' [-Wunused-variable]
+  157 |  uint32_t timeOutI2C = 3000;
+      |           ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/freertos.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:00:51 **** Incremental Build of configuration Debug for project tester407 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+../Core/Src/freertos.c: In function 'TestTask':
+../Core/Src/freertos.c:263:57: error: expected expression before ',' token
+  263 |      status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, , 6, 20);
+      |                                                         ^
+../Core/Src/freertos.c:265:56: error: expected expression before ',' token
+  265 |      status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, , 6, 20);
+      |                                                        ^
+../Core/Src/freertos.c:181:16: warning: variable 'plug' set but not used [-Wunused-but-set-variable]
+  181 |  GPIO_PinState plug = 0;
+      |                ^~~~
+../Core/Src/freertos.c:175:10: warning: unused variable 'cmdRead_Refresh' [-Wunused-variable]
+  175 |  uint8_t cmdRead_Refresh[6] = { 0x00 };// 0x06 0x16 0x01 0x00 0x00 0x1D
+      |          ^~~~~~~~~~~~~~~
+../Core/Src/freertos.c:174:10: warning: unused variable 'cmdRefresh' [-Wunused-variable]
+  174 |  uint8_t cmdRefresh[6] = { 0x55, 0xAA, 0x04, 0x16, 0x00, 0x1A };
+      |          ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/freertos.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:03:19 **** Incremental Build of configuration Debug for project tester407 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+../Core/Src/freertos.c: In function 'TestTask':
+../Core/Src/freertos.c:181:16: warning: variable 'plug' set but not used [-Wunused-but-set-variable]
+  181 |  GPIO_PinState plug = 0;
+      |                ^~~~
+arm-none-eabi-gcc -o "tester407.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Radio\Project\testHash\tester407\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tester407.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:51: multiple definition of `uartTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:65: first defined here
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:52: multiple definition of `status_uartTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:66: first defined here
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:53: multiple definition of `i2cTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:67: first defined here
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:54: multiple definition of `status_i2cTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:68: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: tester407.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:03:51 **** Incremental Build of configuration Debug for project tester407 ****
+make -j8 all 
+arm-none-eabi-gcc -o "tester407.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Radio\Project\testHash\tester407\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tester407.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:51: multiple definition of `uartTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:65: first defined here
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:52: multiple definition of `status_uartTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:66: first defined here
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:53: multiple definition of `i2cTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:67: first defined here
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:54: multiple definition of `status_i2cTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:68: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: tester407.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:04:56 **** Incremental Build of configuration Debug for project tester407 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/freertos.c:65:17: warning: 'uartTIM' initialized and declared 'extern'
+   65 | extern uint32_t uartTIM = 0;
+      |                 ^~~~~~~
+../Core/Src/freertos.c:66:16: warning: 'status_uartTIM' initialized and declared 'extern'
+   66 | extern uint8_t status_uartTIM = 0;
+      |                ^~~~~~~~~~~~~~
+../Core/Src/freertos.c:67:17: warning: 'i2cTIM' initialized and declared 'extern'
+   67 | extern uint32_t i2cTIM = 0;
+      |                 ^~~~~~
+../Core/Src/freertos.c:68:16: warning: 'status_i2cTIM' initialized and declared 'extern'
+   68 | extern uint8_t status_i2cTIM = 0;
+      |                ^~~~~~~~~~~~~
+../Core/Src/freertos.c: In function 'TestTask':
+../Core/Src/freertos.c:181:16: warning: variable 'plug' set but not used [-Wunused-but-set-variable]
+  181 |  GPIO_PinState plug = 0;
+      |                ^~~~
+arm-none-eabi-gcc -o "tester407.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Radio\Project\testHash\tester407\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tester407.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:51: multiple definition of `uartTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:65: first defined here
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:52: multiple definition of `status_uartTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:66: first defined here
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:53: multiple definition of `i2cTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:67: first defined here
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/main.c:54: multiple definition of `status_i2cTIM'; ./Core/Src/freertos.o:D:/Radio/Project/testHash/tester407/Debug/../Core/Src/freertos.c:68: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: tester407.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:05:26 **** Incremental Build of configuration Debug for project tester407 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+../Core/Src/freertos.c: In function 'TestTask':
+../Core/Src/freertos.c:181:16: warning: variable 'plug' set but not used [-Wunused-but-set-variable]
+  181 |  GPIO_PinState plug = 0;
+      |                ^~~~
+arm-none-eabi-gcc -o "tester407.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Radio\Project\testHash\tester407\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tester407.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: tester407.elf
+ 
+arm-none-eabi-size   tester407.elf 
+arm-none-eabi-objdump -h -S  tester407.elf  > "tester407.list"
+arm-none-eabi-objcopy  -O binary  tester407.elf  "tester407.bin"
+   text	   data	    bss	    dec	    hex	filename
+  31380	    124	  18940	  50444	   c50c	tester407.elf
+Finished building: default.size.stdout
+ 
+Finished building: tester407.bin
+ 
+Finished building: tester407.list
+ 
