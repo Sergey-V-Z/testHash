@@ -50,8 +50,7 @@ extern osSemaphoreId endASICHandle;
 //переменные для таймеров
 uint32_t uartTIM = 0;
 uint8_t status_uartTIM = 0;
-uint32_t i2cTIM = 0;
-uint8_t status_i2cTIM = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -182,9 +181,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	    if (status_uartTIM) {
 	    	uartTIM++;
 		}
-	    if (status_i2cTIM) {
-	    	i2cTIM++;
-		}
+
 	  }
 
   /* USER CODE END Callback 0 */
