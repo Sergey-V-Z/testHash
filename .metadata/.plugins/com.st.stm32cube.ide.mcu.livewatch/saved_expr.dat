@@ -3,3 +3,4 @@ status_i2c
 readASIC
 pre_count_ASIC
 counter_bytes
+ready

@@ -176,7 +176,7 @@ void TestTask(void const * argument)
 			osDelay(1200);
 
 			//цикл опроса
-			while (!start) {
+			while (start) {
 
 				//сброс асиков
 				HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_RESET);
@@ -329,7 +329,7 @@ void i2c_Task(void const * argument)
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, cmdRead_Refresh, 6, 20);
 
 					// запустить цикл обновления до остановки пользователем
-					while(!start){
+					while(start){
 							//обновляем пик
 							status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdRefresh, 6, 20);
 							status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, cmdRead_Refresh, 6, 20);
