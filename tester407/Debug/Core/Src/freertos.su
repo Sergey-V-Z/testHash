@@ -1,6 +1,6 @@
-freertos.c:96:6:vApplicationGetIdleTaskMemory	24	static
-freertos.c:110:6:MX_FREERTOS_Init	104	static
-freertos.c:157:6:TestTask	32	static
-freertos.c:223:6:LCDTask	40	static
-freertos.c:257:6:i2c_Task	112	static
-freertos.c:354:6:HAL_UART_RxCpltCallback	16	static
+freertos.c:97:6:vApplicationGetIdleTaskMemory	24	static
+freertos.c:111:6:MX_FREERTOS_Init	104	static
+freertos.c:158:6:TestTask	40	static
+freertos.c:236:6:LCDTask	40	static
+freertos.c:271:6:i2c_Task	112	static
+freertos.c:386:6:HAL_UART_RxCpltCallback	16	static

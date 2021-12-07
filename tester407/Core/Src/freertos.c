@@ -28,6 +28,7 @@
 /* USER CODE BEGIN Includes */
 #include "string.h"
 #include "oled.h"
+#include <stdlib.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -159,7 +160,7 @@ void TestTask(void const * argument)
   /* USER CODE BEGIN TestTask */
 
 	uint32_t timeOutUART = 50;
-
+	uint8_t snum[5];
 	//команды uart
 	uint8_t cmdASIC[7] = { 0x55, 0xAA, 0x52, 0x05, 0x00, 0x00, 0x0A };
 
@@ -193,13 +194,25 @@ void TestTask(void const * argument)
 				while(uartTIM < timeOutUART){
 					osDelay(1);
 				}
+				uartTIM = 0;
+
 				// все данные пришли отключаем уарт
 				HAL_UART_AbortReceive(&huart6);
 
 				//проверить пришедшие данные сравненией с шаблоном
 
 				//посчитать количесво асиков
+
 				pre_count_ASIC = counter_bytes / 9;
+				if(pre_count_ASIC == 0){
+					itoa(pre_count_ASIC, (char*)snum, 10);
+					OLED_Clear();
+					OLED_ShowString(0,0,snum,16);
+				}
+				itoa(pre_count_ASIC, (char*)snum, 10);
+				OLED_Clear();
+				OLED_ShowString(0,0,snum,16);
+
 				counter_bytes = 0;
 				memset(readASIC, 0, sizeof readASIC);
 
@@ -225,7 +238,7 @@ void LCDTask(void const * argument)
   /* USER CODE BEGIN LCDTask */
 
 	uint8_t A[]="hello world !!";
-	//Инициализировать oled-экран
+	//нициализировать oled-экран
   OLED_Init();
 	//Включите OLED-дисплей
 	OLED_Display_On();
@@ -233,7 +246,8 @@ void LCDTask(void const * argument)
 	OLED_Clear();
 //	OLED_ShowNum(10,10,10,8,8);
 //	OLED_ShowChar(0, 0,'C',16);
-	OLED_ShowString(0,0,A,sizeof(A));
+	OLED_ShowString(0,0,A,16);
+	//OLED_ShowNum(10,30,10,3,16);
 
 //	OLED_Clearrow(2);
 //	OLED_Clearrow(3);
@@ -332,8 +346,25 @@ void i2c_Task(void const * argument)
 					while(start){
 							//обновляем пик
 							status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdRefresh, 6, 20);
-							status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, cmdRead_Refresh, 6, 20);
-							osDelay(10000);
+							osDelay(10);
+							status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_Refresh[0], 1, 20);
+							status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_Refresh[1], 1, 20);
+							status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_Refresh[2], 1, 20);
+							status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_Refresh[3], 1, 20);
+							status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_Refresh[4], 1, 20);
+							status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_Refresh[5], 1, 20);
+
+							for (int var = 0; var < 10000; ++var) {
+								if(!start){
+									break;
+								}
+								osDelay(1);
+							}
+
+							if(!start){
+										break;
+							}
+
 					}
 
 					// выключение питания
@@ -346,6 +377,7 @@ void i2c_Task(void const * argument)
 	  }
 
   }
+
   /* USER CODE END i2c_Task */
 }
 
