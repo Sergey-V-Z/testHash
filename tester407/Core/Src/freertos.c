@@ -195,6 +195,7 @@ void TestTask(void const * argument)
 					osDelay(1);
 				}
 				uartTIM = 0;
+				status_uartTIM = 0;
 
 				// все данные пришли отключаем уарт
 				HAL_UART_AbortReceive(&huart6);
@@ -237,7 +238,7 @@ void LCDTask(void const * argument)
 {
   /* USER CODE BEGIN LCDTask */
 
-	uint8_t A[]="hello world !!";
+	uint8_t A[]="Старт";
 	//нициализировать oled-экран
   OLED_Init();
 	//Включите OLED-дисплей
