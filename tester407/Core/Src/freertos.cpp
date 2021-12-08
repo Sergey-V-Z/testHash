@@ -27,7 +27,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "string.h"
-#include <oled.h>
+#include "ssd1306.h"
+//#include "ssd1306_tests.h"
 #include <stdlib.h>
 #include "RV_BUTTON.h"
 /* USER CODE END Includes */
@@ -208,8 +209,10 @@ void TestTask(void const * argument)
 
 				pre_count_ASIC = counter_bytes / 9;
 				itoa(pre_count_ASIC, (char*)snum, 10);
-				OLED_Clear();
-				OLED_ShowString(0,0,snum,16);
+
+			    ssd1306_SetCursor(2, 0);
+			    ssd1306_WriteString((char*)snum, Font_16x26, White);
+			    ssd1306_UpdateScreen();
 
 				counter_bytes = 0;
 				memset(readASIC, 0, sizeof readASIC);
@@ -235,24 +238,19 @@ void LCDTask(void const * argument)
 {
   /* USER CODE BEGIN LCDTask */
 
-	RV_BUTTON button1(B1_GPIO_Port, B1_Pin, LOW_PULL, NORM_OPEN);
-	RV_BUTTON button2(B2_GPIO_Port, B2_Pin, LOW_PULL, NORM_OPEN);
-	RV_BUTTON button3(B3_GPIO_Port, B3_Pin, LOW_PULL, NORM_OPEN);
+	RV_BUTTON button1(B1_GPIO_Port, B1_Pin, HIGH_PULL, NORM_OPEN);
+	RV_BUTTON button2(B2_GPIO_Port, B2_Pin, HIGH_PULL, NORM_OPEN);
+	RV_BUTTON button3(B3_GPIO_Port, B3_Pin, HIGH_PULL, NORM_OPEN);
 
-	uint8_t A[]="init ";
-	//нициализировать oled-экран
-	OLED_Init();
-	//Включите OLED-дисплей
-	OLED_Display_On();
-	//Очисти экран
-	OLED_Clear();
-//	OLED_ShowNum(10,10,10,8,8);
-//	OLED_ShowChar(0, 0,'C',16);
-	OLED_ShowString(0,0,A,16);
-	//OLED_ShowNum(10,30,10,3,16);
+	button1.isClick();
+	button2.isClick();
+	button3.isClick();
 
-//	OLED_Clearrow(2);
-//	OLED_Clearrow(3);
+
+	//ssd1306_TestAll();
+    ssd1306_SetCursor(2, 28);
+    ssd1306_WriteString("Start", Font_16x26, White);
+    ssd1306_UpdateScreen();
 
 /* Infinite loop */
 for (;;) {
