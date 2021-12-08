@@ -27,8 +27,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "string.h"
-#include "oled.h"
+#include <oled.h>
 #include <stdlib.h>
+#include "RV_BUTTON.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -79,6 +80,7 @@ osThreadId I2C_TaskHandle;
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
 
+// extern "C"
 /* USER CODE END FunctionPrototypes */
 
 void TestTask(void const * argument);
@@ -88,7 +90,7 @@ void i2c_Task(void const * argument);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* GetIdleTaskMemory prototype (linked to static allocation support) */
-void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
+extern "C" void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
 
 /* USER CODE BEGIN GET_IDLE_TASK_MEMORY */
 static StaticTask_t xIdleTaskTCBBuffer;
@@ -205,11 +207,6 @@ void TestTask(void const * argument)
 				//посчитать количесво асиков
 
 				pre_count_ASIC = counter_bytes / 9;
-				if(pre_count_ASIC == 0){
-					itoa(pre_count_ASIC, (char*)snum, 10);
-					OLED_Clear();
-					OLED_ShowString(0,0,snum,16);
-				}
 				itoa(pre_count_ASIC, (char*)snum, 10);
 				OLED_Clear();
 				OLED_ShowString(0,0,snum,16);
@@ -238,9 +235,13 @@ void LCDTask(void const * argument)
 {
   /* USER CODE BEGIN LCDTask */
 
+	RV_BUTTON button1(B1_GPIO_Port, B1_Pin, LOW_PULL, NORM_OPEN);
+	RV_BUTTON button2(B2_GPIO_Port, B2_Pin, LOW_PULL, NORM_OPEN);
+	RV_BUTTON button3(B3_GPIO_Port, B3_Pin, LOW_PULL, NORM_OPEN);
+
 	uint8_t A[]="Старт";
 	//нициализировать oled-экран
-  OLED_Init();
+	OLED_Init();
 	//Включите OLED-дисплей
 	OLED_Display_On();
 	//Очисти экран
@@ -255,7 +256,18 @@ void LCDTask(void const * argument)
 
 /* Infinite loop */
 for (;;) {
+	button1.tick();
+	button2.tick();
+	button3.tick();
 
+	if (button1.isClick() ){
+		if (start == 0) {
+			start = 1;
+		}else {
+			start = 0;
+		}
+
+	}
 
 	osDelay(1);
 }
@@ -277,7 +289,7 @@ void i2c_Task(void const * argument)
 	uint16_t addr = 0x20;
 	addr = addr<<1;
 
-	GPIO_PinState plug = 0;
+	GPIO_PinState plug = GPIO_PIN_RESET;
 
 	uint8_t cmdStart_1[6] = { 0x55, 0xAA, 0x04, 0x07, 0x00, 0x0B };
 	uint8_t cmdRead_1[2] = { 0x00 };// 0x07 0x01
@@ -363,7 +375,7 @@ void i2c_Task(void const * argument)
 							}
 
 							if(!start){
-										break;
+									break;
 							}
 
 					}

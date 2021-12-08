@@ -1,4 +1,4 @@
-Core/Src/freertos.o: ../Core/Src/freertos.c \
+Core/Src/freertos.o: ../Core/Src/freertos.cpp \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -46,7 +46,8 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- ../Core/Inc/oled.h ../Core/Inc/i2c.h ../Core/Inc/main.h
+ ../Core/Inc/oled.h ../Core/Inc/i2c.h ../Core/Inc/main.h \
+ ../Core/Inc/RV_BUTTON.h
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 
@@ -149,3 +150,5 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 ../Core/Inc/i2c.h:
 
 ../Core/Inc/main.h:
+
+../Core/Inc/RV_BUTTON.h:
