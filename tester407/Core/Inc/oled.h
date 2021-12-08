@@ -1,6 +1,10 @@
 #ifndef __OLED_H_
 #define __OLED_H_	
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "stdint.h"
 #include "i2c.h"
 
@@ -46,5 +50,9 @@ void OLED_ShowString(uint8_t x,uint8_t y,uint8_t *chr,uint8_t Char_Size);
 //显示汉字
 //hzk 用取模软件得出的数组
 void OLED_ShowCHinese(uint8_t x,uint8_t y,uint8_t no);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

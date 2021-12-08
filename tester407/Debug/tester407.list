@@ -7,19 +7,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   1 .text         000083f4  08000190  08000190  00010190  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       0000097c  08008584  08008584  00018584  2**2
+  2 .rodata       00000978  08008584  08008584  00018584  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08008f00  08008f00  00020090  2**0
+  3 .ARM.extab    00000000  08008efc  08008efc  00020090  2**0
                   CONTENTS
-  4 .ARM          00000008  08008f00  08008f00  00018f00  2**2
+  4 .ARM          00000008  08008efc  08008efc  00018efc  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  08008f08  08008f08  00020090  2**0
+  5 .preinit_array 00000000  08008f04  08008f04  00020090  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08008f08  08008f08  00018f08  2**2
+  6 .init_array   00000004  08008f04  08008f04  00018f04  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .fini_array   00000004  08008f0c  08008f0c  00018f0c  2**2
+  7 .fini_array   00000004  08008f08  08008f08  00018f08  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         00000090  20000000  08008f10  00020000  2**2
+  8 .data         00000090  20000000  08008f0c  00020000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
   9 .ccmram       00000000  10000000  10000000  00020090  2**0
                   CONTENTS
@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  12 .ARM.attributes 00000030  00000000  00000000  00020090  2**0
                   CONTENTS, READONLY
- 13 .debug_info   0001d754  00000000  00000000  000200c0  2**0
+ 13 .debug_info   0001d672  00000000  00000000  000200c0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 00003b26  00000000  00000000  0003d814  2**0
+ 14 .debug_abbrev 00003b12  00000000  00000000  0003d732  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00001558  00000000  00000000  00041340  2**3
+ 15 .debug_aranges 00001558  00000000  00000000  00041248  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 00001418  00000000  00000000  00042898  2**3
+ 16 .debug_ranges 00001418  00000000  00000000  000427a0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00025d91  00000000  00000000  00043cb0  2**0
+ 17 .debug_macro  00025d8c  00000000  00000000  00043bb8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00019bbf  00000000  00000000  00069a41  2**0
+ 18 .debug_line   00019b70  00000000  00000000  00069944  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000d7aa3  00000000  00000000  00083600  2**0
+ 19 .debug_str    000d79b6  00000000  00000000  000834b4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000053  00000000  00000000  0015b0a3  2**0
+ 20 .comment      00000053  00000000  00000000  0015ae6a  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00005c84  00000000  00000000  0015b0f8  2**2
+ 21 .debug_frame  00005c84  00000000  00000000  0015aec0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -818,7 +818,7 @@ void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer,
   * @param  None
   * @retval None
   */
-void MX_FREERTOS_Init(void) {
+   void MX_FREERTOS_Init(void) {
  80007e4:	b5b0      	push	{r4, r5, r7, lr}
  80007e6:	b096      	sub	sp, #88	; 0x58
  80007e8:	af00      	add	r7, sp, #0
@@ -1062,13 +1062,13 @@ void TestTask(void const * argument)
  8000980:	4619      	mov	r1, r3
  8000982:	f007 fcdf 	bl	8008344 <itoa>
 				OLED_Clear();
- 8000986:	f000 fdc2 	bl	800150e <_Z10OLED_Clearv>
+ 8000986:	f000 fdc2 	bl	800150e <OLED_Clear>
 				OLED_ShowString(0,0,snum,16);
  800098a:	f107 0214 	add.w	r2, r7, #20
  800098e:	2310      	movs	r3, #16
  8000990:	2100      	movs	r1, #0
  8000992:	2000      	movs	r0, #0
- 8000994:	f000 fe8e 	bl	80016b4 <_Z15OLED_ShowStringhhPhh>
+ 8000994:	f000 fe8e 	bl	80016b4 <OLED_ShowString>
 
 				counter_bytes = 0;
  8000998:	4b0a      	ldr	r3, [pc, #40]	; (80009c4 <_Z8TestTaskPKv+0x14c>)
@@ -1138,81 +1138,80 @@ void LCDTask(void const * argument)
  8000a26:	4920      	ldr	r1, [pc, #128]	; (8000aa8 <_Z7LCDTaskPKv+0xc0>)
  8000a28:	f7ff fd4e 	bl	80004c8 <_ZN9RV_BUTTONC1EP12GPIO_TypeDeftbb>
 
-	uint8_t A[]="Старт";
+	uint8_t A[]="init ";
  8000a2c:	4a1f      	ldr	r2, [pc, #124]	; (8000aac <_Z7LCDTaskPKv+0xc4>)
- 8000a2e:	f107 0308 	add.w	r3, r7, #8
- 8000a32:	ca07      	ldmia	r2, {r0, r1, r2}
- 8000a34:	c303      	stmia	r3!, {r0, r1}
- 8000a36:	801a      	strh	r2, [r3, #0]
- 8000a38:	3302      	adds	r3, #2
- 8000a3a:	0c12      	lsrs	r2, r2, #16
- 8000a3c:	701a      	strb	r2, [r3, #0]
+ 8000a2e:	f107 030c 	add.w	r3, r7, #12
+ 8000a32:	e892 0003 	ldmia.w	r2, {r0, r1}
+ 8000a36:	6018      	str	r0, [r3, #0]
+ 8000a38:	3304      	adds	r3, #4
+ 8000a3a:	8019      	strh	r1, [r3, #0]
 	//нициализировать oled-экран
 	OLED_Init();
- 8000a3e:	f000 fd5d 	bl	80014fc <_Z9OLED_Initv>
+ 8000a3c:	f000 fd5e 	bl	80014fc <OLED_Init>
 	//Включите OLED-дисплей
 	OLED_Display_On();
- 8000a42:	f000 fd8d 	bl	8001560 <_Z15OLED_Display_Onv>
+ 8000a40:	f000 fd8f 	bl	8001562 <OLED_Display_On>
 	//Очисти экран
 	OLED_Clear();
- 8000a46:	f000 fd62 	bl	800150e <_Z10OLED_Clearv>
+ 8000a44:	f000 fd63 	bl	800150e <OLED_Clear>
 //	OLED_ShowNum(10,10,10,8,8);
 //	OLED_ShowChar(0, 0,'C',16);
 	OLED_ShowString(0,0,A,16);
- 8000a4a:	f107 0208 	add.w	r2, r7, #8
- 8000a4e:	2310      	movs	r3, #16
- 8000a50:	2100      	movs	r1, #0
- 8000a52:	2000      	movs	r0, #0
- 8000a54:	f000 fe2e 	bl	80016b4 <_Z15OLED_ShowStringhhPhh>
+ 8000a48:	f107 020c 	add.w	r2, r7, #12
+ 8000a4c:	2310      	movs	r3, #16
+ 8000a4e:	2100      	movs	r1, #0
+ 8000a50:	2000      	movs	r0, #0
+ 8000a52:	f000 fe2f 	bl	80016b4 <OLED_ShowString>
 //	OLED_Clearrow(2);
 //	OLED_Clearrow(3);
 
 /* Infinite loop */
 for (;;) {
 	button1.tick();
- 8000a58:	f107 034c 	add.w	r3, r7, #76	; 0x4c
- 8000a5c:	4618      	mov	r0, r3
- 8000a5e:	f7ff fda2 	bl	80005a6 <_ZN9RV_BUTTON4tickEv>
+ 8000a56:	f107 034c 	add.w	r3, r7, #76	; 0x4c
+ 8000a5a:	4618      	mov	r0, r3
+ 8000a5c:	f7ff fda3 	bl	80005a6 <_ZN9RV_BUTTON4tickEv>
 	button2.tick();
- 8000a62:	f107 0330 	add.w	r3, r7, #48	; 0x30
- 8000a66:	4618      	mov	r0, r3
- 8000a68:	f7ff fd9d 	bl	80005a6 <_ZN9RV_BUTTON4tickEv>
+ 8000a60:	f107 0330 	add.w	r3, r7, #48	; 0x30
+ 8000a64:	4618      	mov	r0, r3
+ 8000a66:	f7ff fd9e 	bl	80005a6 <_ZN9RV_BUTTON4tickEv>
 	button3.tick();
- 8000a6c:	f107 0314 	add.w	r3, r7, #20
- 8000a70:	4618      	mov	r0, r3
- 8000a72:	f7ff fd98 	bl	80005a6 <_ZN9RV_BUTTON4tickEv>
+ 8000a6a:	f107 0314 	add.w	r3, r7, #20
+ 8000a6e:	4618      	mov	r0, r3
+ 8000a70:	f7ff fd99 	bl	80005a6 <_ZN9RV_BUTTON4tickEv>
 
 	if (button1.isClick() ){
- 8000a76:	f107 034c 	add.w	r3, r7, #76	; 0x4c
- 8000a7a:	4618      	mov	r0, r3
- 8000a7c:	f7ff fd7a 	bl	8000574 <_ZN9RV_BUTTON7isClickEv>
- 8000a80:	4603      	mov	r3, r0
- 8000a82:	2b00      	cmp	r3, #0
- 8000a84:	d00a      	beq.n	8000a9c <_Z7LCDTaskPKv+0xb4>
+ 8000a74:	f107 034c 	add.w	r3, r7, #76	; 0x4c
+ 8000a78:	4618      	mov	r0, r3
+ 8000a7a:	f7ff fd7b 	bl	8000574 <_ZN9RV_BUTTON7isClickEv>
+ 8000a7e:	4603      	mov	r3, r0
+ 8000a80:	2b00      	cmp	r3, #0
+ 8000a82:	d00a      	beq.n	8000a9a <_Z7LCDTaskPKv+0xb2>
 		if (start == 0) {
- 8000a86:	4b0a      	ldr	r3, [pc, #40]	; (8000ab0 <_Z7LCDTaskPKv+0xc8>)
- 8000a88:	781b      	ldrb	r3, [r3, #0]
- 8000a8a:	2b00      	cmp	r3, #0
- 8000a8c:	d103      	bne.n	8000a96 <_Z7LCDTaskPKv+0xae>
+ 8000a84:	4b0a      	ldr	r3, [pc, #40]	; (8000ab0 <_Z7LCDTaskPKv+0xc8>)
+ 8000a86:	781b      	ldrb	r3, [r3, #0]
+ 8000a88:	2b00      	cmp	r3, #0
+ 8000a8a:	d103      	bne.n	8000a94 <_Z7LCDTaskPKv+0xac>
 			start = 1;
- 8000a8e:	4b08      	ldr	r3, [pc, #32]	; (8000ab0 <_Z7LCDTaskPKv+0xc8>)
- 8000a90:	2201      	movs	r2, #1
- 8000a92:	701a      	strb	r2, [r3, #0]
- 8000a94:	e002      	b.n	8000a9c <_Z7LCDTaskPKv+0xb4>
+ 8000a8c:	4b08      	ldr	r3, [pc, #32]	; (8000ab0 <_Z7LCDTaskPKv+0xc8>)
+ 8000a8e:	2201      	movs	r2, #1
+ 8000a90:	701a      	strb	r2, [r3, #0]
+ 8000a92:	e002      	b.n	8000a9a <_Z7LCDTaskPKv+0xb2>
 		}else {
 			start = 0;
- 8000a96:	4b06      	ldr	r3, [pc, #24]	; (8000ab0 <_Z7LCDTaskPKv+0xc8>)
- 8000a98:	2200      	movs	r2, #0
- 8000a9a:	701a      	strb	r2, [r3, #0]
+ 8000a94:	4b06      	ldr	r3, [pc, #24]	; (8000ab0 <_Z7LCDTaskPKv+0xc8>)
+ 8000a96:	2200      	movs	r2, #0
+ 8000a98:	701a      	strb	r2, [r3, #0]
 		}
 
 	}
 
 	osDelay(1);
- 8000a9c:	2001      	movs	r0, #1
- 8000a9e:	f006 fa06 	bl	8006eae <osDelay>
+ 8000a9a:	2001      	movs	r0, #1
+ 8000a9c:	f006 fa07 	bl	8006eae <osDelay>
 	button1.tick();
- 8000aa2:	e7d9      	b.n	8000a58 <_Z7LCDTaskPKv+0x70>
+ 8000aa0:	e7d9      	b.n	8000a56 <_Z7LCDTaskPKv+0x6e>
+ 8000aa2:	bf00      	nop
  8000aa4:	40020000 	.word	0x40020000
  8000aa8:	40020800 	.word	0x40020800
  8000aac:	08008600 	.word	0x08008600
@@ -1640,12 +1639,12 @@ void i2c_Task(void const * argument)
  8000e0e:	4b0b      	ldr	r3, [pc, #44]	; (8000e3c <_Z8i2c_TaskPKv+0x388>)
  8000e10:	701a      	strb	r2, [r3, #0]
  8000e12:	e017      	b.n	8000e44 <_Z8i2c_TaskPKv+0x390>
- 8000e14:	0800860c 	.word	0x0800860c
- 8000e18:	08008614 	.word	0x08008614
- 8000e1c:	0800861c 	.word	0x0800861c
- 8000e20:	08008628 	.word	0x08008628
- 8000e24:	08008630 	.word	0x08008630
- 8000e28:	08008638 	.word	0x08008638
+ 8000e14:	08008608 	.word	0x08008608
+ 8000e18:	08008610 	.word	0x08008610
+ 8000e1c:	08008618 	.word	0x08008618
+ 8000e20:	08008624 	.word	0x08008624
+ 8000e24:	0800862c 	.word	0x0800862c
+ 8000e28:	08008634 	.word	0x08008634
  8000e2c:	40020c00 	.word	0x40020c00
  8000e30:	40020800 	.word	0x40020800
  8000e34:	200002d4 	.word	0x200002d4
@@ -2639,7 +2638,7 @@ __STATIC_FORCEINLINE void __disable_irq(void)
  800144c:	e7fe      	b.n	800144c <Error_Handler+0x8>
 	...
 
-08001450 <_Z8WriteCmdv>:
+08001450 <WriteCmd>:
 0xC8, 0xD3, 0x00, 0xD5, 0x80, 0xD8, 0x05, 0xD9, 0xF1, 0xDA, 0x12,
 					
 0xD8, 0x30, 0x8D, 0x14, 0xAF};
@@ -2655,39 +2654,39 @@ void WriteCmd()
 	for(i=0; i<27; i++){
  800145a:	2300      	movs	r3, #0
  800145c:	71fb      	strb	r3, [r7, #7]
- 800145e:	79fb      	ldrb	r3, [r7, #7]
- 8001460:	2b1a      	cmp	r3, #26
- 8001462:	d812      	bhi.n	800148a <_Z8WriteCmdv+0x3a>
+ 800145e:	e011      	b.n	8001484 <WriteCmd+0x34>
 		HAL_I2C_Mem_Write(&hi2c3 ,0x78,0x00,I2C_MEMADD_SIZE_8BIT,CMD_Data+i,1,0x100);
- 8001464:	79fb      	ldrb	r3, [r7, #7]
- 8001466:	4a0b      	ldr	r2, [pc, #44]	; (8001494 <_Z8WriteCmdv+0x44>)
- 8001468:	4413      	add	r3, r2
- 800146a:	f44f 7280 	mov.w	r2, #256	; 0x100
- 800146e:	9202      	str	r2, [sp, #8]
- 8001470:	2201      	movs	r2, #1
- 8001472:	9201      	str	r2, [sp, #4]
- 8001474:	9300      	str	r3, [sp, #0]
- 8001476:	2301      	movs	r3, #1
- 8001478:	2200      	movs	r2, #0
- 800147a:	2178      	movs	r1, #120	; 0x78
- 800147c:	4806      	ldr	r0, [pc, #24]	; (8001498 <_Z8WriteCmdv+0x48>)
- 800147e:	f001 fb5f 	bl	8002b40 <HAL_I2C_Mem_Write>
+ 8001460:	79fb      	ldrb	r3, [r7, #7]
+ 8001462:	4a0c      	ldr	r2, [pc, #48]	; (8001494 <WriteCmd+0x44>)
+ 8001464:	4413      	add	r3, r2
+ 8001466:	f44f 7280 	mov.w	r2, #256	; 0x100
+ 800146a:	9202      	str	r2, [sp, #8]
+ 800146c:	2201      	movs	r2, #1
+ 800146e:	9201      	str	r2, [sp, #4]
+ 8001470:	9300      	str	r3, [sp, #0]
+ 8001472:	2301      	movs	r3, #1
+ 8001474:	2200      	movs	r2, #0
+ 8001476:	2178      	movs	r1, #120	; 0x78
+ 8001478:	4807      	ldr	r0, [pc, #28]	; (8001498 <WriteCmd+0x48>)
+ 800147a:	f001 fb61 	bl	8002b40 <HAL_I2C_Mem_Write>
 	for(i=0; i<27; i++){
- 8001482:	79fb      	ldrb	r3, [r7, #7]
- 8001484:	3301      	adds	r3, #1
- 8001486:	71fb      	strb	r3, [r7, #7]
- 8001488:	e7e9      	b.n	800145e <_Z8WriteCmdv+0xe>
+ 800147e:	79fb      	ldrb	r3, [r7, #7]
+ 8001480:	3301      	adds	r3, #1
+ 8001482:	71fb      	strb	r3, [r7, #7]
+ 8001484:	79fb      	ldrb	r3, [r7, #7]
+ 8001486:	2b1a      	cmp	r3, #26
+ 8001488:	d9ea      	bls.n	8001460 <WriteCmd+0x10>
 	}
 }
  800148a:	bf00      	nop
- 800148c:	3708      	adds	r7, #8
- 800148e:	46bd      	mov	sp, r7
- 8001490:	bd80      	pop	{r7, pc}
- 8001492:	bf00      	nop
+ 800148c:	bf00      	nop
+ 800148e:	3708      	adds	r7, #8
+ 8001490:	46bd      	mov	sp, r7
+ 8001492:	bd80      	pop	{r7, pc}
  8001494:	20000000 	.word	0x20000000
  8001498:	200042f8 	.word	0x200042f8
 
-0800149c <_Z11OLED_WR_CMDh>:
+0800149c <OLED_WR_CMD>:
 
 //Записать управляющие команды в устройство
 void OLED_WR_CMD(uint8_t cmd)
@@ -2707,7 +2706,7 @@ void OLED_WR_CMD(uint8_t cmd)
  80014b4:	2301      	movs	r3, #1
  80014b6:	2200      	movs	r2, #0
  80014b8:	2178      	movs	r1, #120	; 0x78
- 80014ba:	4803      	ldr	r0, [pc, #12]	; (80014c8 <_Z11OLED_WR_CMDh+0x2c>)
+ 80014ba:	4803      	ldr	r0, [pc, #12]	; (80014c8 <OLED_WR_CMD+0x2c>)
  80014bc:	f001 fb40 	bl	8002b40 <HAL_I2C_Mem_Write>
 }
  80014c0:	bf00      	nop
@@ -2716,7 +2715,7 @@ void OLED_WR_CMD(uint8_t cmd)
  80014c6:	bd80      	pop	{r7, pc}
  80014c8:	200042f8 	.word	0x200042f8
 
-080014cc <_Z12OLED_WR_DATAh>:
+080014cc <OLED_WR_DATA>:
 
 //Записать данные на устройство
 void OLED_WR_DATA(uint8_t data)
@@ -2736,7 +2735,7 @@ void OLED_WR_DATA(uint8_t data)
  80014e4:	2301      	movs	r3, #1
  80014e6:	2240      	movs	r2, #64	; 0x40
  80014e8:	2178      	movs	r1, #120	; 0x78
- 80014ea:	4803      	ldr	r0, [pc, #12]	; (80014f8 <_Z12OLED_WR_DATAh+0x2c>)
+ 80014ea:	4803      	ldr	r0, [pc, #12]	; (80014f8 <OLED_WR_DATA+0x2c>)
  80014ec:	f001 fb28 	bl	8002b40 <HAL_I2C_Mem_Write>
 }
  80014f0:	bf00      	nop
@@ -2745,7 +2744,7 @@ void OLED_WR_DATA(uint8_t data)
  80014f6:	bd80      	pop	{r7, pc}
  80014f8:	200042f8 	.word	0x200042f8
 
-080014fc <_Z9OLED_Initv>:
+080014fc <OLED_Init>:
 
 //Инициализировать oled-экран
 void OLED_Init(void)
@@ -2756,12 +2755,12 @@ void OLED_Init(void)
  8001500:	20c8      	movs	r0, #200	; 0xc8
  8001502:	f000 fb35 	bl	8001b70 <HAL_Delay>
 	WriteCmd();
- 8001506:	f7ff ffa3 	bl	8001450 <_Z8WriteCmdv>
+ 8001506:	f7ff ffa3 	bl	8001450 <WriteCmd>
 }
  800150a:	bf00      	nop
  800150c:	bd80      	pop	{r7, pc}
 
-0800150e <_Z10OLED_Clearv>:
+0800150e <OLED_Clear>:
 
 //Очисти экран
 void OLED_Clear()
@@ -2773,111 +2772,111 @@ void OLED_Clear()
 	for(i=0;i<8;i++)  
  8001514:	2300      	movs	r3, #0
  8001516:	71fb      	strb	r3, [r7, #7]
- 8001518:	79fb      	ldrb	r3, [r7, #7]
- 800151a:	2b07      	cmp	r3, #7
- 800151c:	d81c      	bhi.n	8001558 <_Z10OLED_Clearv+0x4a>
+ 8001518:	e01b      	b.n	8001552 <OLED_Clear+0x44>
 	{  
 		OLED_WR_CMD(0xb0+i);
- 800151e:	79fb      	ldrb	r3, [r7, #7]
- 8001520:	3b50      	subs	r3, #80	; 0x50
- 8001522:	b2db      	uxtb	r3, r3
- 8001524:	4618      	mov	r0, r3
- 8001526:	f7ff ffb9 	bl	800149c <_Z11OLED_WR_CMDh>
+ 800151a:	79fb      	ldrb	r3, [r7, #7]
+ 800151c:	3b50      	subs	r3, #80	; 0x50
+ 800151e:	b2db      	uxtb	r3, r3
+ 8001520:	4618      	mov	r0, r3
+ 8001522:	f7ff ffbb 	bl	800149c <OLED_WR_CMD>
 		OLED_WR_CMD (0x00); 
- 800152a:	2000      	movs	r0, #0
- 800152c:	f7ff ffb6 	bl	800149c <_Z11OLED_WR_CMDh>
+ 8001526:	2000      	movs	r0, #0
+ 8001528:	f7ff ffb8 	bl	800149c <OLED_WR_CMD>
 		OLED_WR_CMD (0x10); 
- 8001530:	2010      	movs	r0, #16
- 8001532:	f7ff ffb3 	bl	800149c <_Z11OLED_WR_CMDh>
+ 800152c:	2010      	movs	r0, #16
+ 800152e:	f7ff ffb5 	bl	800149c <OLED_WR_CMD>
 		for(n=0;n<128;n++)
- 8001536:	2300      	movs	r3, #0
- 8001538:	71bb      	strb	r3, [r7, #6]
- 800153a:	f997 3006 	ldrsb.w	r3, [r7, #6]
- 800153e:	2b00      	cmp	r3, #0
- 8001540:	db06      	blt.n	8001550 <_Z10OLED_Clearv+0x42>
+ 8001532:	2300      	movs	r3, #0
+ 8001534:	71bb      	strb	r3, [r7, #6]
+ 8001536:	e005      	b.n	8001544 <OLED_Clear+0x36>
 			OLED_WR_DATA(0);
- 8001542:	2000      	movs	r0, #0
- 8001544:	f7ff ffc2 	bl	80014cc <_Z12OLED_WR_DATAh>
+ 8001538:	2000      	movs	r0, #0
+ 800153a:	f7ff ffc7 	bl	80014cc <OLED_WR_DATA>
 		for(n=0;n<128;n++)
- 8001548:	79bb      	ldrb	r3, [r7, #6]
- 800154a:	3301      	adds	r3, #1
- 800154c:	71bb      	strb	r3, [r7, #6]
- 800154e:	e7f4      	b.n	800153a <_Z10OLED_Clearv+0x2c>
+ 800153e:	79bb      	ldrb	r3, [r7, #6]
+ 8001540:	3301      	adds	r3, #1
+ 8001542:	71bb      	strb	r3, [r7, #6]
+ 8001544:	f997 3006 	ldrsb.w	r3, [r7, #6]
+ 8001548:	2b00      	cmp	r3, #0
+ 800154a:	daf5      	bge.n	8001538 <OLED_Clear+0x2a>
 	for(i=0;i<8;i++)  
- 8001550:	79fb      	ldrb	r3, [r7, #7]
- 8001552:	3301      	adds	r3, #1
- 8001554:	71fb      	strb	r3, [r7, #7]
- 8001556:	e7df      	b.n	8001518 <_Z10OLED_Clearv+0xa>
+ 800154c:	79fb      	ldrb	r3, [r7, #7]
+ 800154e:	3301      	adds	r3, #1
+ 8001550:	71fb      	strb	r3, [r7, #7]
+ 8001552:	79fb      	ldrb	r3, [r7, #7]
+ 8001554:	2b07      	cmp	r3, #7
+ 8001556:	d9e0      	bls.n	800151a <OLED_Clear+0xc>
 	} 
 }
  8001558:	bf00      	nop
- 800155a:	3708      	adds	r7, #8
- 800155c:	46bd      	mov	sp, r7
- 800155e:	bd80      	pop	{r7, pc}
+ 800155a:	bf00      	nop
+ 800155c:	3708      	adds	r7, #8
+ 800155e:	46bd      	mov	sp, r7
+ 8001560:	bd80      	pop	{r7, pc}
 
-08001560 <_Z15OLED_Display_Onv>:
+08001562 <OLED_Display_On>:
 
 //Включите OLED-дисплей
 void OLED_Display_On(void)
 {
- 8001560:	b580      	push	{r7, lr}
- 8001562:	af00      	add	r7, sp, #0
+ 8001562:	b580      	push	{r7, lr}
+ 8001564:	af00      	add	r7, sp, #0
 	OLED_WR_CMD(0X8D);  //Команда SET DCDC
- 8001564:	208d      	movs	r0, #141	; 0x8d
- 8001566:	f7ff ff99 	bl	800149c <_Z11OLED_WR_CMDh>
+ 8001566:	208d      	movs	r0, #141	; 0x8d
+ 8001568:	f7ff ff98 	bl	800149c <OLED_WR_CMD>
 	OLED_WR_CMD(0X14);  //DCDC ON
- 800156a:	2014      	movs	r0, #20
- 800156c:	f7ff ff96 	bl	800149c <_Z11OLED_WR_CMDh>
+ 800156c:	2014      	movs	r0, #20
+ 800156e:	f7ff ff95 	bl	800149c <OLED_WR_CMD>
 	OLED_WR_CMD(0XAF);  //DISPLAY ON
- 8001570:	20af      	movs	r0, #175	; 0xaf
- 8001572:	f7ff ff93 	bl	800149c <_Z11OLED_WR_CMDh>
+ 8001572:	20af      	movs	r0, #175	; 0xaf
+ 8001574:	f7ff ff92 	bl	800149c <OLED_WR_CMD>
 }
- 8001576:	bf00      	nop
- 8001578:	bd80      	pop	{r7, pc}
+ 8001578:	bf00      	nop
+ 800157a:	bd80      	pop	{r7, pc}
 
-0800157a <_Z12OLED_Set_Poshh>:
+0800157c <OLED_Set_Pos>:
 	OLED_WR_CMD(0X10);  //DCDC OFF
 	OLED_WR_CMD(0XAE);  //DISPLAY OFF
 }
 
 void OLED_Set_Pos(uint8_t x, uint8_t y) 
 { 	
- 800157a:	b580      	push	{r7, lr}
- 800157c:	b082      	sub	sp, #8
- 800157e:	af00      	add	r7, sp, #0
- 8001580:	4603      	mov	r3, r0
- 8001582:	460a      	mov	r2, r1
- 8001584:	71fb      	strb	r3, [r7, #7]
- 8001586:	4613      	mov	r3, r2
- 8001588:	71bb      	strb	r3, [r7, #6]
+ 800157c:	b580      	push	{r7, lr}
+ 800157e:	b082      	sub	sp, #8
+ 8001580:	af00      	add	r7, sp, #0
+ 8001582:	4603      	mov	r3, r0
+ 8001584:	460a      	mov	r2, r1
+ 8001586:	71fb      	strb	r3, [r7, #7]
+ 8001588:	4613      	mov	r3, r2
+ 800158a:	71bb      	strb	r3, [r7, #6]
 	OLED_WR_CMD(0xb0+y);
- 800158a:	79bb      	ldrb	r3, [r7, #6]
- 800158c:	3b50      	subs	r3, #80	; 0x50
- 800158e:	b2db      	uxtb	r3, r3
- 8001590:	4618      	mov	r0, r3
- 8001592:	f7ff ff83 	bl	800149c <_Z11OLED_WR_CMDh>
+ 800158c:	79bb      	ldrb	r3, [r7, #6]
+ 800158e:	3b50      	subs	r3, #80	; 0x50
+ 8001590:	b2db      	uxtb	r3, r3
+ 8001592:	4618      	mov	r0, r3
+ 8001594:	f7ff ff82 	bl	800149c <OLED_WR_CMD>
 	OLED_WR_CMD(((x&0xf0)>>4)|0x10);
- 8001596:	79fb      	ldrb	r3, [r7, #7]
- 8001598:	091b      	lsrs	r3, r3, #4
- 800159a:	b2db      	uxtb	r3, r3
- 800159c:	f043 0310 	orr.w	r3, r3, #16
- 80015a0:	b2db      	uxtb	r3, r3
- 80015a2:	4618      	mov	r0, r3
- 80015a4:	f7ff ff7a 	bl	800149c <_Z11OLED_WR_CMDh>
+ 8001598:	79fb      	ldrb	r3, [r7, #7]
+ 800159a:	091b      	lsrs	r3, r3, #4
+ 800159c:	b2db      	uxtb	r3, r3
+ 800159e:	f043 0310 	orr.w	r3, r3, #16
+ 80015a2:	b2db      	uxtb	r3, r3
+ 80015a4:	4618      	mov	r0, r3
+ 80015a6:	f7ff ff79 	bl	800149c <OLED_WR_CMD>
 	OLED_WR_CMD(x&0x0f);
- 80015a8:	79fb      	ldrb	r3, [r7, #7]
- 80015aa:	f003 030f 	and.w	r3, r3, #15
- 80015ae:	b2db      	uxtb	r3, r3
- 80015b0:	4618      	mov	r0, r3
- 80015b2:	f7ff ff73 	bl	800149c <_Z11OLED_WR_CMDh>
+ 80015aa:	79fb      	ldrb	r3, [r7, #7]
+ 80015ac:	f003 030f 	and.w	r3, r3, #15
+ 80015b0:	b2db      	uxtb	r3, r3
+ 80015b2:	4618      	mov	r0, r3
+ 80015b4:	f7ff ff72 	bl	800149c <OLED_WR_CMD>
 } 
- 80015b6:	bf00      	nop
- 80015b8:	3708      	adds	r7, #8
- 80015ba:	46bd      	mov	sp, r7
- 80015bc:	bd80      	pop	{r7, pc}
-	...
+ 80015b8:	bf00      	nop
+ 80015ba:	3708      	adds	r7, #8
+ 80015bc:	46bd      	mov	sp, r7
+ 80015be:	bd80      	pop	{r7, pc}
 
-080015c0 <_Z13OLED_ShowCharhhhh>:
+080015c0 <OLED_ShowChar>:
 //x:0~127
 //y:0~63
 //chr: 0, обратный дисплей; 1, нормальный дисплей
@@ -2911,7 +2910,7 @@ void OLED_ShowChar(uint8_t x,uint8_t y,uint8_t chr,uint8_t Char_Size)
 		if(x>128-1){x=0;y=y+2;}
  80015ec:	f997 3007 	ldrsb.w	r3, [r7, #7]
  80015f0:	2b00      	cmp	r3, #0
- 80015f2:	da04      	bge.n	80015fe <_Z13OLED_ShowCharhhhh+0x3e>
+ 80015f2:	da04      	bge.n	80015fe <OLED_ShowChar+0x3e>
  80015f4:	2300      	movs	r3, #0
  80015f6:	71fb      	strb	r3, [r7, #7]
  80015f8:	79bb      	ldrb	r3, [r7, #6]
@@ -2920,34 +2919,34 @@ void OLED_ShowChar(uint8_t x,uint8_t y,uint8_t chr,uint8_t Char_Size)
 		if(Char_Size ==16)
  80015fe:	793b      	ldrb	r3, [r7, #4]
  8001600:	2b10      	cmp	r3, #16
- 8001602:	d132      	bne.n	800166a <_Z13OLED_ShowCharhhhh+0xaa>
+ 8001602:	d133      	bne.n	800166c <OLED_ShowChar+0xac>
 			{
 			OLED_Set_Pos(x,y);	
  8001604:	79ba      	ldrb	r2, [r7, #6]
  8001606:	79fb      	ldrb	r3, [r7, #7]
  8001608:	4611      	mov	r1, r2
  800160a:	4618      	mov	r0, r3
- 800160c:	f7ff ffb5 	bl	800157a <_Z12OLED_Set_Poshh>
+ 800160c:	f7ff ffb6 	bl	800157c <OLED_Set_Pos>
 			for(i=0;i<8;i++)
  8001610:	2300      	movs	r3, #0
  8001612:	73fb      	strb	r3, [r7, #15]
- 8001614:	7bfb      	ldrb	r3, [r7, #15]
- 8001616:	2b07      	cmp	r3, #7
- 8001618:	d80c      	bhi.n	8001634 <_Z13OLED_ShowCharhhhh+0x74>
+ 8001614:	e00b      	b.n	800162e <OLED_ShowChar+0x6e>
 			OLED_WR_DATA(F8x16[c*16+i]);
- 800161a:	7bbb      	ldrb	r3, [r7, #14]
- 800161c:	011a      	lsls	r2, r3, #4
- 800161e:	7bfb      	ldrb	r3, [r7, #15]
- 8001620:	4413      	add	r3, r2
- 8001622:	4a22      	ldr	r2, [pc, #136]	; (80016ac <_Z13OLED_ShowCharhhhh+0xec>)
- 8001624:	5cd3      	ldrb	r3, [r2, r3]
- 8001626:	4618      	mov	r0, r3
- 8001628:	f7ff ff50 	bl	80014cc <_Z12OLED_WR_DATAh>
+ 8001616:	7bbb      	ldrb	r3, [r7, #14]
+ 8001618:	011a      	lsls	r2, r3, #4
+ 800161a:	7bfb      	ldrb	r3, [r7, #15]
+ 800161c:	4413      	add	r3, r2
+ 800161e:	4a23      	ldr	r2, [pc, #140]	; (80016ac <OLED_ShowChar+0xec>)
+ 8001620:	5cd3      	ldrb	r3, [r2, r3]
+ 8001622:	4618      	mov	r0, r3
+ 8001624:	f7ff ff52 	bl	80014cc <OLED_WR_DATA>
 			for(i=0;i<8;i++)
- 800162c:	7bfb      	ldrb	r3, [r7, #15]
- 800162e:	3301      	adds	r3, #1
- 8001630:	73fb      	strb	r3, [r7, #15]
- 8001632:	e7ef      	b.n	8001614 <_Z13OLED_ShowCharhhhh+0x54>
+ 8001628:	7bfb      	ldrb	r3, [r7, #15]
+ 800162a:	3301      	adds	r3, #1
+ 800162c:	73fb      	strb	r3, [r7, #15]
+ 800162e:	7bfb      	ldrb	r3, [r7, #15]
+ 8001630:	2b07      	cmp	r3, #7
+ 8001632:	d9f0      	bls.n	8001616 <OLED_ShowChar+0x56>
 			OLED_Set_Pos(x,y+1);
  8001634:	79bb      	ldrb	r3, [r7, #6]
  8001636:	3301      	adds	r3, #1
@@ -2955,72 +2954,74 @@ void OLED_ShowChar(uint8_t x,uint8_t y,uint8_t chr,uint8_t Char_Size)
  800163a:	79fb      	ldrb	r3, [r7, #7]
  800163c:	4611      	mov	r1, r2
  800163e:	4618      	mov	r0, r3
- 8001640:	f7ff ff9b 	bl	800157a <_Z12OLED_Set_Poshh>
+ 8001640:	f7ff ff9c 	bl	800157c <OLED_Set_Pos>
 			for(i=0;i<8;i++)
  8001644:	2300      	movs	r3, #0
  8001646:	73fb      	strb	r3, [r7, #15]
- 8001648:	7bfb      	ldrb	r3, [r7, #15]
- 800164a:	2b07      	cmp	r3, #7
- 800164c:	d829      	bhi.n	80016a2 <_Z13OLED_ShowCharhhhh+0xe2>
+ 8001648:	e00c      	b.n	8001664 <OLED_ShowChar+0xa4>
 			OLED_WR_DATA(F8x16[c*16+i+8]);
- 800164e:	7bbb      	ldrb	r3, [r7, #14]
- 8001650:	011a      	lsls	r2, r3, #4
- 8001652:	7bfb      	ldrb	r3, [r7, #15]
- 8001654:	4413      	add	r3, r2
- 8001656:	3308      	adds	r3, #8
- 8001658:	4a14      	ldr	r2, [pc, #80]	; (80016ac <_Z13OLED_ShowCharhhhh+0xec>)
- 800165a:	5cd3      	ldrb	r3, [r2, r3]
- 800165c:	4618      	mov	r0, r3
- 800165e:	f7ff ff35 	bl	80014cc <_Z12OLED_WR_DATAh>
+ 800164a:	7bbb      	ldrb	r3, [r7, #14]
+ 800164c:	011a      	lsls	r2, r3, #4
+ 800164e:	7bfb      	ldrb	r3, [r7, #15]
+ 8001650:	4413      	add	r3, r2
+ 8001652:	3308      	adds	r3, #8
+ 8001654:	4a15      	ldr	r2, [pc, #84]	; (80016ac <OLED_ShowChar+0xec>)
+ 8001656:	5cd3      	ldrb	r3, [r2, r3]
+ 8001658:	4618      	mov	r0, r3
+ 800165a:	f7ff ff37 	bl	80014cc <OLED_WR_DATA>
 			for(i=0;i<8;i++)
- 8001662:	7bfb      	ldrb	r3, [r7, #15]
- 8001664:	3301      	adds	r3, #1
- 8001666:	73fb      	strb	r3, [r7, #15]
- 8001668:	e7ee      	b.n	8001648 <_Z13OLED_ShowCharhhhh+0x88>
-			}
-			else {	
+ 800165e:	7bfb      	ldrb	r3, [r7, #15]
+ 8001660:	3301      	adds	r3, #1
+ 8001662:	73fb      	strb	r3, [r7, #15]
+ 8001664:	7bfb      	ldrb	r3, [r7, #15]
+ 8001666:	2b07      	cmp	r3, #7
+ 8001668:	d9ef      	bls.n	800164a <OLED_ShowChar+0x8a>
 				OLED_Set_Pos(x,y);
- 800166a:	79ba      	ldrb	r2, [r7, #6]
- 800166c:	79fb      	ldrb	r3, [r7, #7]
- 800166e:	4611      	mov	r1, r2
- 8001670:	4618      	mov	r0, r3
- 8001672:	f7ff ff82 	bl	800157a <_Z12OLED_Set_Poshh>
 				for(i=0;i<6;i++)
- 8001676:	2300      	movs	r3, #0
- 8001678:	73fb      	strb	r3, [r7, #15]
- 800167a:	7bfb      	ldrb	r3, [r7, #15]
- 800167c:	2b05      	cmp	r3, #5
- 800167e:	d810      	bhi.n	80016a2 <_Z13OLED_ShowCharhhhh+0xe2>
 				OLED_WR_DATA(F6x8[c][i]);
- 8001680:	7bba      	ldrb	r2, [r7, #14]
- 8001682:	7bf9      	ldrb	r1, [r7, #15]
- 8001684:	480a      	ldr	r0, [pc, #40]	; (80016b0 <_Z13OLED_ShowCharhhhh+0xf0>)
- 8001686:	4613      	mov	r3, r2
- 8001688:	005b      	lsls	r3, r3, #1
- 800168a:	4413      	add	r3, r2
- 800168c:	005b      	lsls	r3, r3, #1
- 800168e:	4403      	add	r3, r0
- 8001690:	440b      	add	r3, r1
- 8001692:	781b      	ldrb	r3, [r3, #0]
- 8001694:	4618      	mov	r0, r3
- 8001696:	f7ff ff19 	bl	80014cc <_Z12OLED_WR_DATAh>
-				for(i=0;i<6;i++)
- 800169a:	7bfb      	ldrb	r3, [r7, #15]
- 800169c:	3301      	adds	r3, #1
- 800169e:	73fb      	strb	r3, [r7, #15]
- 80016a0:	e7eb      	b.n	800167a <_Z13OLED_ShowCharhhhh+0xba>
 				
 			}
 }
- 80016a2:	bf00      	nop
- 80016a4:	3714      	adds	r7, #20
- 80016a6:	46bd      	mov	sp, r7
- 80016a8:	bd90      	pop	{r4, r7, pc}
- 80016aa:	bf00      	nop
- 80016ac:	08008870 	.word	0x08008870
- 80016b0:	08008648 	.word	0x08008648
+ 800166a:	e01b      	b.n	80016a4 <OLED_ShowChar+0xe4>
+				OLED_Set_Pos(x,y);
+ 800166c:	79ba      	ldrb	r2, [r7, #6]
+ 800166e:	79fb      	ldrb	r3, [r7, #7]
+ 8001670:	4611      	mov	r1, r2
+ 8001672:	4618      	mov	r0, r3
+ 8001674:	f7ff ff82 	bl	800157c <OLED_Set_Pos>
+				for(i=0;i<6;i++)
+ 8001678:	2300      	movs	r3, #0
+ 800167a:	73fb      	strb	r3, [r7, #15]
+ 800167c:	e00f      	b.n	800169e <OLED_ShowChar+0xde>
+				OLED_WR_DATA(F6x8[c][i]);
+ 800167e:	7bba      	ldrb	r2, [r7, #14]
+ 8001680:	7bf9      	ldrb	r1, [r7, #15]
+ 8001682:	480b      	ldr	r0, [pc, #44]	; (80016b0 <OLED_ShowChar+0xf0>)
+ 8001684:	4613      	mov	r3, r2
+ 8001686:	005b      	lsls	r3, r3, #1
+ 8001688:	4413      	add	r3, r2
+ 800168a:	005b      	lsls	r3, r3, #1
+ 800168c:	4403      	add	r3, r0
+ 800168e:	440b      	add	r3, r1
+ 8001690:	781b      	ldrb	r3, [r3, #0]
+ 8001692:	4618      	mov	r0, r3
+ 8001694:	f7ff ff1a 	bl	80014cc <OLED_WR_DATA>
+				for(i=0;i<6;i++)
+ 8001698:	7bfb      	ldrb	r3, [r7, #15]
+ 800169a:	3301      	adds	r3, #1
+ 800169c:	73fb      	strb	r3, [r7, #15]
+ 800169e:	7bfb      	ldrb	r3, [r7, #15]
+ 80016a0:	2b05      	cmp	r3, #5
+ 80016a2:	d9ec      	bls.n	800167e <OLED_ShowChar+0xbe>
+}
+ 80016a4:	bf00      	nop
+ 80016a6:	3714      	adds	r7, #20
+ 80016a8:	46bd      	mov	sp, r7
+ 80016aa:	bd90      	pop	{r4, r7, pc}
+ 80016ac:	0800886c 	.word	0x0800886c
+ 80016b0:	08008644 	.word	0x08008644
 
-080016b4 <_Z15OLED_ShowStringhhPhh>:
+080016b4 <OLED_ShowString>:
 	 	OLED_ShowChar(x+(size2/2)*t,y,temp+'0',size2); 
 	}
 } 
@@ -3042,47 +3043,47 @@ void OLED_ShowString(uint8_t x,uint8_t y,uint8_t *chr,uint8_t Char_Size)
  80016ca:	2300      	movs	r3, #0
  80016cc:	73fb      	strb	r3, [r7, #15]
 	while (chr[j]!='\0')
- 80016ce:	7bfb      	ldrb	r3, [r7, #15]
- 80016d0:	683a      	ldr	r2, [r7, #0]
- 80016d2:	4413      	add	r3, r2
- 80016d4:	781b      	ldrb	r3, [r3, #0]
- 80016d6:	2b00      	cmp	r3, #0
- 80016d8:	d017      	beq.n	800170a <_Z15OLED_ShowStringhhPhh+0x56>
+ 80016ce:	e016      	b.n	80016fe <OLED_ShowString+0x4a>
 	{		OLED_ShowChar(x,y,chr[j],Char_Size);
- 80016da:	7bfb      	ldrb	r3, [r7, #15]
- 80016dc:	683a      	ldr	r2, [r7, #0]
- 80016de:	4413      	add	r3, r2
- 80016e0:	781a      	ldrb	r2, [r3, #0]
- 80016e2:	797b      	ldrb	r3, [r7, #5]
- 80016e4:	79b9      	ldrb	r1, [r7, #6]
- 80016e6:	79f8      	ldrb	r0, [r7, #7]
- 80016e8:	f7ff ff6a 	bl	80015c0 <_Z13OLED_ShowCharhhhh>
+ 80016d0:	7bfb      	ldrb	r3, [r7, #15]
+ 80016d2:	683a      	ldr	r2, [r7, #0]
+ 80016d4:	4413      	add	r3, r2
+ 80016d6:	781a      	ldrb	r2, [r3, #0]
+ 80016d8:	797b      	ldrb	r3, [r7, #5]
+ 80016da:	79b9      	ldrb	r1, [r7, #6]
+ 80016dc:	79f8      	ldrb	r0, [r7, #7]
+ 80016de:	f7ff ff6f 	bl	80015c0 <OLED_ShowChar>
 			x+=8;
- 80016ec:	79fb      	ldrb	r3, [r7, #7]
- 80016ee:	3308      	adds	r3, #8
- 80016f0:	71fb      	strb	r3, [r7, #7]
+ 80016e2:	79fb      	ldrb	r3, [r7, #7]
+ 80016e4:	3308      	adds	r3, #8
+ 80016e6:	71fb      	strb	r3, [r7, #7]
 		if(x>120){x=0;y+=2;}
- 80016f2:	79fb      	ldrb	r3, [r7, #7]
- 80016f4:	2b78      	cmp	r3, #120	; 0x78
- 80016f6:	d904      	bls.n	8001702 <_Z15OLED_ShowStringhhPhh+0x4e>
- 80016f8:	2300      	movs	r3, #0
- 80016fa:	71fb      	strb	r3, [r7, #7]
- 80016fc:	79bb      	ldrb	r3, [r7, #6]
- 80016fe:	3302      	adds	r3, #2
- 8001700:	71bb      	strb	r3, [r7, #6]
+ 80016e8:	79fb      	ldrb	r3, [r7, #7]
+ 80016ea:	2b78      	cmp	r3, #120	; 0x78
+ 80016ec:	d904      	bls.n	80016f8 <OLED_ShowString+0x44>
+ 80016ee:	2300      	movs	r3, #0
+ 80016f0:	71fb      	strb	r3, [r7, #7]
+ 80016f2:	79bb      	ldrb	r3, [r7, #6]
+ 80016f4:	3302      	adds	r3, #2
+ 80016f6:	71bb      	strb	r3, [r7, #6]
 			j++;
- 8001702:	7bfb      	ldrb	r3, [r7, #15]
- 8001704:	3301      	adds	r3, #1
- 8001706:	73fb      	strb	r3, [r7, #15]
+ 80016f8:	7bfb      	ldrb	r3, [r7, #15]
+ 80016fa:	3301      	adds	r3, #1
+ 80016fc:	73fb      	strb	r3, [r7, #15]
 	while (chr[j]!='\0')
- 8001708:	e7e1      	b.n	80016ce <_Z15OLED_ShowStringhhPhh+0x1a>
+ 80016fe:	7bfb      	ldrb	r3, [r7, #15]
+ 8001700:	683a      	ldr	r2, [r7, #0]
+ 8001702:	4413      	add	r3, r2
+ 8001704:	781b      	ldrb	r3, [r3, #0]
+ 8001706:	2b00      	cmp	r3, #0
+ 8001708:	d1e2      	bne.n	80016d0 <OLED_ShowString+0x1c>
 	}
 }
  800170a:	bf00      	nop
- 800170c:	3710      	adds	r7, #16
- 800170e:	46bd      	mov	sp, r7
- 8001710:	bd80      	pop	{r7, pc}
-	...
+ 800170c:	bf00      	nop
+ 800170e:	3710      	adds	r7, #16
+ 8001710:	46bd      	mov	sp, r7
+ 8001712:	bd80      	pop	{r7, pc}
 
 08001714 <HAL_MspInit>:
 /* USER CODE END 0 */
@@ -3898,7 +3899,7 @@ LoopFillZerobss:
   ldr r1, =_edata
  8001ad8:	20000090 	.word	0x20000090
   ldr r2, =_sidata
- 8001adc:	08008f10 	.word	0x08008f10
+ 8001adc:	08008f0c 	.word	0x08008f0c
   ldr r2, =_sbss
  8001ae0:	20000090 	.word	0x20000090
   ldr r4, =_ebss
@@ -14069,7 +14070,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef  *RCC_ClkInitStruct, ui
  8005502:	bf00      	nop
  8005504:	40023c00 	.word	0x40023c00
  8005508:	40023800 	.word	0x40023800
- 800550c:	08008e60 	.word	0x08008e60
+ 800550c:	08008e5c 	.word	0x08008e5c
  8005510:	2000001c 	.word	0x2000001c
  8005514:	20000020 	.word	0x20000020
 
@@ -14338,7 +14339,7 @@ uint32_t HAL_RCC_GetPCLK1Freq(void)
  8005710:	4618      	mov	r0, r3
  8005712:	bd80      	pop	{r7, pc}
  8005714:	40023800 	.word	0x40023800
- 8005718:	08008e70 	.word	0x08008e70
+ 8005718:	08008e6c 	.word	0x08008e6c
 
 0800571c <HAL_RCC_GetPCLK2Freq>:
   * @note   Each time PCLK2 changes, this function must be called to update the
@@ -14364,7 +14365,7 @@ uint32_t HAL_RCC_GetPCLK2Freq(void)
  8005738:	4618      	mov	r0, r3
  800573a:	bd80      	pop	{r7, pc}
  800573c:	40023800 	.word	0x40023800
- 8005740:	08008e70 	.word	0x08008e70
+ 8005740:	08008e6c 	.word	0x08008e6c
 
 08005744 <HAL_RCC_GetClockConfig>:
   * will be configured.
@@ -19104,9 +19105,9 @@ uint32_t ulNewBASEPRI;
  80072ae:	3720      	adds	r7, #32
  80072b0:	46bd      	mov	sp, r7
  80072b2:	bd80      	pop	{r7, pc}
- 80072b4:	08008e98 	.word	0x08008e98
- 80072b8:	08008eb8 	.word	0x08008eb8
- 80072bc:	08008e78 	.word	0x08008e78
+ 80072b4:	08008e94 	.word	0x08008e94
+ 80072b8:	08008eb4 	.word	0x08008eb4
+ 80072bc:	08008e74 	.word	0x08008e74
 
 080072c0 <prvAddNewTaskToReadyList>:
 /*-----------------------------------------------------------*/
@@ -19486,7 +19487,7 @@ BaseType_t xReturn;
  80074aa:	46bd      	mov	sp, r7
  80074ac:	bd80      	pop	{r7, pc}
  80074ae:	bf00      	nop
- 80074b0:	08008640 	.word	0x08008640
+ 80074b0:	0800863c 	.word	0x0800863c
  80074b4:	08007859 	.word	0x08007859
  80074b8:	200006c4 	.word	0x200006c4
  80074bc:	200005a0 	.word	0x200005a0
@@ -22076,10 +22077,10 @@ uint8_t *puc;
  80082fe:	4798      	blx	r3
  8008300:	3601      	adds	r6, #1
  8008302:	e7f2      	b.n	80082ea <__libc_init_array+0x1e>
- 8008304:	08008f08 	.word	0x08008f08
- 8008308:	08008f08 	.word	0x08008f08
- 800830c:	08008f08 	.word	0x08008f08
- 8008310:	08008f0c 	.word	0x08008f0c
+ 8008304:	08008f04 	.word	0x08008f04
+ 8008308:	08008f04 	.word	0x08008f04
+ 800830c:	08008f04 	.word	0x08008f04
+ 8008310:	08008f08 	.word	0x08008f08
 
 08008314 <__itoa>:
  8008314:	1e93      	subs	r3, r2, #2
@@ -22272,7 +22273,7 @@ uint8_t *puc;
  80084a8:	3201      	adds	r2, #1
  80084aa:	f801 5901 	strb.w	r5, [r1], #-1
  80084ae:	e7f4      	b.n	800849a <__utoa+0x6a>
- 80084b0:	08008ed8 	.word	0x08008ed8
+ 80084b0:	08008ed4 	.word	0x08008ed4
 
 080084b4 <__malloc_lock>:
  80084b4:	4801      	ldr	r0, [pc, #4]	; (80084bc <__malloc_lock+0x8>)

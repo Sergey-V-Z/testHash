@@ -110,7 +110,7 @@ void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer,
   * @param  None
   * @retval None
   */
-void MX_FREERTOS_Init(void) {
+   void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
@@ -239,7 +239,7 @@ void LCDTask(void const * argument)
 	RV_BUTTON button2(B2_GPIO_Port, B2_Pin, LOW_PULL, NORM_OPEN);
 	RV_BUTTON button3(B3_GPIO_Port, B3_Pin, LOW_PULL, NORM_OPEN);
 
-	uint8_t A[]="Старт";
+	uint8_t A[]="init ";
 	//нициализировать oled-экран
 	OLED_Init();
 	//Включите OLED-дисплей

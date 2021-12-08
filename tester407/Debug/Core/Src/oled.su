@@ -1,13 +1,13 @@
-oled.cpp:15:6:void WriteCmd()	32	static
-oled.cpp:24:6:void OLED_WR_CMD(uint8_t)	32	static
-oled.cpp:30:6:void OLED_WR_DATA(uint8_t)	32	static
-oled.cpp:36:6:void OLED_Init()	8	static
-oled.cpp:43:6:void OLED_Clear()	16	static
-oled.cpp:57:6:void OLED_Display_On()	8	static
-oled.cpp:65:6:void OLED_Display_Off()	8	static
-oled.cpp:72:6:void OLED_Set_Pos(uint8_t, uint8_t)	16	static
-oled.cpp:79:6:void OLED_On()	16	static
-oled.cpp:91:14:unsigned int oled_pow(uint8_t, uint8_t)	24	static
-oled.cpp:103:6:void OLED_ShowChar(uint8_t, uint8_t, uint8_t, uint8_t)	32	static
-oled.cpp:130:6:void OLED_ShowNum(uint8_t, uint8_t, unsigned int, uint8_t, uint8_t)	24	static
-oled.cpp:150:6:void OLED_ShowString(uint8_t, uint8_t, uint8_t*, uint8_t)	24	static
+oled.c:15:6:WriteCmd	32	static
+oled.c:24:6:OLED_WR_CMD	32	static
+oled.c:30:6:OLED_WR_DATA	32	static
+oled.c:36:6:OLED_Init	8	static
+oled.c:43:6:OLED_Clear	16	static
+oled.c:57:6:OLED_Display_On	8	static
+oled.c:65:6:OLED_Display_Off	8	static
+oled.c:72:6:OLED_Set_Pos	16	static
+oled.c:79:6:OLED_On	16	static
+oled.c:91:14:oled_pow	24	static
+oled.c:103:6:OLED_ShowChar	32	static
+oled.c:130:6:OLED_ShowNum	24	static
+oled.c:150:6:OLED_ShowString	24	static

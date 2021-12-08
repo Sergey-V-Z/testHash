@@ -7928,3 +7928,48 @@
 2021-12-08 15:04:39,718 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: [HttpServer] Started.
 2021-12-08 15:04:39,718 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
 2021-12-08 15:04:41,602 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2021-12-08 16:44:34,625 [INFO] Activator:177 - 
+
+
+2021-12-08 16:44:34,626 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-08 16:44:36,266 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 08, 2021 4:44:36 PM org.glassfish.grizzly.http.server.NetworkListener start
+2021-12-08 16:44:36,268 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: Started listener bound to [localhost:1594]
+2021-12-08 16:44:36,268 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-08 16:44:36,270 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 08, 2021 4:44:36 PM org.glassfish.grizzly.http.server.HttpServer start
+2021-12-08 16:44:36,271 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: [HttpServer] Started.
+2021-12-08 16:44:36,271 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-08 16:44:37,396 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2021-12-08 16:44:38,100 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-08 16:44:38,102 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-08 16:44:38,104 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-08 16:45:52,092 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-08 16:45:59,474 [INFO] Activator:177 - 
+
+
+2021-12-08 16:45:59,475 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-08 16:46:00,272 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-08 16:46:00,275 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-08 16:46:00,278 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-08 16:46:02,993 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 08, 2021 4:46:02 PM org.glassfish.grizzly.http.server.NetworkListener start
+2021-12-08 16:46:02,995 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: Started listener bound to [localhost:1597]
+2021-12-08 16:46:02,995 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-08 16:46:02,996 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 08, 2021 4:46:02 PM org.glassfish.grizzly.http.server.HttpServer start
+2021-12-08 16:46:02,997 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: [HttpServer] Started.
+2021-12-08 16:46:02,998 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-08 16:46:04,266 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2021-12-08 16:46:58,226 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-08 16:47:11,528 [INFO] Activator:177 - 
+
+
+2021-12-08 16:47:11,529 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-08 16:47:12,335 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-08 16:47:12,338 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-08 16:47:12,341 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-08 16:47:14,981 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 08, 2021 4:47:14 PM org.glassfish.grizzly.http.server.NetworkListener start
+2021-12-08 16:47:14,983 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: Started listener bound to [localhost:1594]
+2021-12-08 16:47:14,983 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-08 16:47:14,984 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 08, 2021 4:47:14 PM org.glassfish.grizzly.http.server.HttpServer start
+2021-12-08 16:47:14,985 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: [HttpServer] Started.
+2021-12-08 16:47:14,985 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-08 16:47:16,106 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2021-12-08 16:56:00,171 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
