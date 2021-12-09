@@ -7973,3 +7973,1084 @@
 2021-12-08 16:47:14,985 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
 2021-12-08 16:47:16,106 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
 2021-12-08 16:56:00,171 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-09 10:40:11,308 [INFO] Activator:177 - 
+
+
+2021-12-09 10:40:11,309 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-09 10:40:13,245 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 09, 2021 10:40:13 AM org.glassfish.grizzly.http.server.NetworkListener start
+2021-12-09 10:40:13,249 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: Started listener bound to [localhost:1596]
+2021-12-09 10:40:13,249 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-09 10:40:13,256 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 09, 2021 10:40:13 AM org.glassfish.grizzly.http.server.HttpServer start
+2021-12-09 10:40:13,257 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: [HttpServer] Started.
+2021-12-09 10:40:13,257 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-09 10:40:14,772 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2021-12-09 10:40:15,535 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-09 10:40:15,537 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-09 10:40:15,539 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-09 10:41:48,710 [INFO] McuFinderGlobals:39 - Set McuFinder mode to 2 (CubeIDE integrated)
+2021-12-09 10:41:48,806 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105
+2021-12-09 10:41:48,816 [INFO] DbMcusXml:74 - Set database path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/mcu/
+2021-12-09 10:41:48,821 [INFO] DbBoardsPdsc:56 - Set plugin database path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/boardmanager/
+2021-12-09 10:41:48,821 [INFO] DbMcus:258 - Set plugin images path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/mcufinder/images/
+2021-12-09 10:41:48,822 [INFO] DbBoards:264 - Set plugin images path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/mcufinder/images/
+2021-12-09 10:41:48,824 [INFO] DbExamples:332 - Set plugin images path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/mcufinder/images/
+2021-12-09 10:41:48,842 [INFO] DbMcusAds:119 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:48,843 [INFO] DbMcusDocs:110 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:48,845 [INFO] DbMcusJson:64 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:48,846 [INFO] DbBoardsDocs:110 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:48,847 [INFO] DbBoardsJson:57 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:48,851 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/cs/
+2021-12-09 10:41:48,854 [INFO] DbExamplesSqlite:764 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:48,939 [INFO] RulesReader:57 - Compatibility file has been processed (244 Rules)
+2021-12-09 10:41:49,003 [INFO] DbMcusXml:74 - Set database path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/mcu/
+2021-12-09 10:41:49,004 [INFO] DbBoardsPdsc:56 - Set plugin database path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/boardmanager/
+2021-12-09 10:41:49,004 [INFO] DbMcus:258 - Set plugin images path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/mcufinder/images/
+2021-12-09 10:41:49,005 [INFO] DbBoards:264 - Set plugin images path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/mcufinder/images/
+2021-12-09 10:41:49,005 [INFO] DbExamples:332 - Set plugin images path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/mcufinder/images/
+2021-12-09 10:41:49,007 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,007 [INFO] DbMcusAds:119 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,007 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,007 [INFO] DbMcusDocs:110 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,007 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,007 [INFO] DbMcusJson:64 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,008 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,008 [INFO] DbBoardsDocs:110 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,008 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,008 [INFO] DbBoardsJson:57 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,008 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,008 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,008 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/cs/
+2021-12-09 10:41:49,008 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,009 [INFO] DbExamplesSqlite:764 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,078 [INFO] MainPanel:220 - HeapMemory: 492830720
+2021-12-09 10:41:49,147 [INFO] DbMcusXml:74 - Set database path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/mcu/
+2021-12-09 10:41:49,147 [INFO] DbBoardsPdsc:56 - Set plugin database path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/boardmanager/
+2021-12-09 10:41:49,147 [INFO] DbMcus:258 - Set plugin images path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/mcufinder/images/
+2021-12-09 10:41:49,148 [INFO] DbBoards:264 - Set plugin images path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/mcufinder/images/
+2021-12-09 10:41:49,148 [INFO] DbExamples:332 - Set plugin images path to: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/plugins/mcufinder/images/
+2021-12-09 10:41:49,148 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,148 [INFO] DbMcusAds:119 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,148 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,148 [INFO] DbMcusDocs:110 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,149 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,149 [INFO] DbMcusJson:64 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,149 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,149 [INFO] DbBoardsDocs:110 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,149 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,149 [INFO] DbBoardsJson:57 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,149 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,149 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,150 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/cs/
+2021-12-09 10:41:49,150 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Sergey\.stmcufinder\plugins\mcufinder/ => C:\Users\Sergey\.stmcufinder\plugins\mcufinder
+2021-12-09 10:41:49,150 [INFO] DbExamplesSqlite:764 - Set database path to: C:\Users\Sergey\.stmcufinder\plugins\mcufinder//mcu/
+2021-12-09 10:41:49,167 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105
+2021-12-09 10:41:49,169 [INFO] PluginManage:188 - Search for loadable plugins [exclusion list=, ]
+2021-12-09 10:41:49,170 [INFO] PluginManage:302 - Check plugin analytics
+2021-12-09 10:41:49,280 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2021-12-09 10:41:49,340 [INFO] AnalyticsPlugin:257 - Accepted Software Licenses: STM32CubeMX.5.4.0,STM32CubeMX.5.6.1
+2021-12-09 10:41:49,341 [INFO] AnalyticsPlugin:259 - Accepted CMSIS Pack Licenses: 
+2021-12-09 10:41:49,341 [INFO] AnalyticsPlugin:261 - Accepted Firmware Licenses: 
+2021-12-09 10:41:49,349 [INFO] PluginManage:352 - Loaded plugin analytics (category:tool,tabindex:-1)
+2021-12-09 10:41:49,349 [INFO] PluginManage:302 - Check plugin clock
+2021-12-09 10:41:49,359 [INFO] PluginManage:352 - Loaded plugin clock (category:base,tabindex:2)
+2021-12-09 10:41:49,359 [INFO] PluginManage:302 - Check plugin ddr
+2021-12-09 10:41:49,362 [INFO] PluginManage:352 - Loaded plugin ddr (category:tool,tabindex:6)
+2021-12-09 10:41:49,362 [INFO] PluginManage:302 - Check plugin filemanager
+2021-12-09 10:41:49,469 [INFO] PluginManage:352 - Loaded plugin filemanager (category:base,tabindex:10)
+2021-12-09 10:41:49,469 [INFO] PluginManage:302 - Check plugin ipmanager
+2021-12-09 10:41:49,476 [INFO] PluginManage:352 - Loaded plugin ipmanager (category:base,tabindex:5)
+2021-12-09 10:41:49,476 [INFO] PluginManage:302 - Check plugin pinoutandconfiguration
+2021-12-09 10:41:49,484 [INFO] PluginManage:352 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2021-12-09 10:41:49,484 [INFO] PluginManage:302 - Check plugin pinoutconfig
+2021-12-09 10:41:49,513 [INFO] PluginManage:352 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2021-12-09 10:41:49,513 [INFO] PluginManage:302 - Check plugin power
+2021-12-09 10:41:49,521 [INFO] PluginManage:352 - Loaded plugin power (category:power,tabindex:4)
+2021-12-09 10:41:49,522 [INFO] PluginManage:302 - Check plugin projectmanager
+2021-12-09 10:41:49,537 [INFO] PluginManage:352 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2021-12-09 10:41:49,537 [INFO] PluginManage:302 - Check plugin thirdparty
+2021-12-09 10:41:49,646 [WARN] IntegrityCheckThread:78 - waiting for thirdparty lock release [integrity check]
+2021-12-09 10:41:49,647 [INFO] IntegrityCheckThread:80 - entering critical section [integrity check]
+2021-12-09 10:41:49,647 [INFO] PluginManage:352 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2021-12-09 10:41:49,648 [INFO] PluginManage:302 - Check plugin tools
+2021-12-09 10:41:49,650 [INFO] ThirdPartyUpdaterWithRetryManager:66 - Updater plugin not ready yet. [1/15]
+2021-12-09 10:41:49,650 [INFO] PluginManage:352 - Loaded plugin tools (category:base,tabindex:7)
+2021-12-09 10:41:49,650 [INFO] PluginManage:302 - Check plugin tutovideos
+2021-12-09 10:41:49,842 [INFO] PluginManage:352 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2021-12-09 10:41:49,843 [INFO] PluginManage:302 - Check plugin updater
+2021-12-09 10:41:49,853 [INFO] PluginManage:352 - Loaded plugin updater (category:base,tabindex:12)
+2021-12-09 10:41:49,854 [INFO] PluginManage:275 - PluginManage : Loaded plugins [13]
+2021-12-09 10:41:49,990 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-12-09 10:41:50,062 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,062 [INFO] PluginManager:213 - loadIPPluginJar : add adc
+2021-12-09 10:41:50,065 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,065 [INFO] PluginManager:213 - loadIPPluginJar : add aes
+2021-12-09 10:41:50,067 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,068 [INFO] PluginManager:213 - loadIPPluginJar : add can
+2021-12-09 10:41:50,069 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,069 [INFO] PluginManager:213 - loadIPPluginJar : add comp
+2021-12-09 10:41:50,072 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,072 [INFO] PluginManager:213 - loadIPPluginJar : add cryp
+2021-12-09 10:41:50,075 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,075 [INFO] PluginManager:213 - loadIPPluginJar : add dfsdm
+2021-12-09 10:41:50,081 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,082 [INFO] PluginManager:213 - loadIPPluginJar : add dma
+2021-12-09 10:41:50,084 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,084 [INFO] PluginManager:213 - loadIPPluginJar : add dma3
+2021-12-09 10:41:50,086 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,086 [INFO] PluginManager:213 - loadIPPluginJar : add fatfs
+2021-12-09 10:41:50,090 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,090 [INFO] PluginManager:213 - loadIPPluginJar : add fmc
+2021-12-09 10:41:50,095 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,096 [INFO] PluginManager:213 - loadIPPluginJar : add freertos
+2021-12-09 10:41:50,097 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,097 [INFO] PluginManager:213 - loadIPPluginJar : add genericplugin
+2021-12-09 10:41:50,099 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,099 [INFO] PluginManager:213 - loadIPPluginJar : add gfxmmu
+2021-12-09 10:41:50,104 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,105 [INFO] PluginManager:213 - loadIPPluginJar : add gic
+2021-12-09 10:41:50,109 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,109 [INFO] PluginManager:213 - loadIPPluginJar : add gpio
+2021-12-09 10:41:50,112 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,112 [INFO] PluginManager:213 - loadIPPluginJar : add gtzc
+2021-12-09 10:41:50,114 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,114 [INFO] PluginManager:213 - loadIPPluginJar : add hash
+2021-12-09 10:41:50,117 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,117 [INFO] PluginManager:213 - loadIPPluginJar : add i2c
+2021-12-09 10:41:50,119 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,120 [INFO] PluginManager:213 - loadIPPluginJar : add i2s
+2021-12-09 10:41:50,122 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,123 [INFO] PluginManager:213 - loadIPPluginJar : add ipddr
+2021-12-09 10:41:50,129 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,129 [INFO] PluginManager:213 - loadIPPluginJar : add linkedlist
+2021-12-09 10:41:50,132 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,138 [INFO] PluginManager:213 - loadIPPluginJar : add lorawan
+2021-12-09 10:41:50,140 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,140 [INFO] PluginManager:213 - loadIPPluginJar : add ltdc
+2021-12-09 10:41:50,146 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,146 [INFO] PluginManager:213 - loadIPPluginJar : add mdma
+2021-12-09 10:41:50,150 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,150 [INFO] PluginManager:213 - loadIPPluginJar : add nvic
+2021-12-09 10:41:50,153 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,154 [INFO] PluginManager:213 - loadIPPluginJar : add opamp
+2021-12-09 10:41:50,156 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,157 [INFO] PluginManager:213 - loadIPPluginJar : add openamp
+2021-12-09 10:41:50,160 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,160 [INFO] PluginManager:213 - loadIPPluginJar : add pdm2pcm
+2021-12-09 10:41:50,167 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,170 [INFO] PluginManager:213 - loadIPPluginJar : add plateformsettings
+2021-12-09 10:41:50,172 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,172 [INFO] PluginManager:213 - loadIPPluginJar : add quadspi
+2021-12-09 10:41:50,175 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,176 [INFO] PluginManager:213 - loadIPPluginJar : add resmgrutility
+2021-12-09 10:41:50,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,179 [INFO] PluginManager:213 - loadIPPluginJar : add sai
+2021-12-09 10:41:50,181 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,182 [INFO] PluginManager:213 - loadIPPluginJar : add spi
+2021-12-09 10:41:50,186 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,187 [INFO] PluginManager:213 - loadIPPluginJar : add stm32_wpan
+2021-12-09 10:41:50,189 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,189 [INFO] PluginManager:213 - loadIPPluginJar : add tim
+2021-12-09 10:41:50,192 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,193 [INFO] PluginManager:213 - loadIPPluginJar : add touchsensing
+2021-12-09 10:41:50,195 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,195 [INFO] PluginManager:213 - loadIPPluginJar : add tracer_emb
+2021-12-09 10:41:50,196 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,196 [INFO] PluginManager:213 - loadIPPluginJar : add ts
+2021-12-09 10:41:50,199 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,199 [INFO] PluginManager:213 - loadIPPluginJar : add tsc
+2021-12-09 10:41:50,200 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,201 [INFO] PluginManager:213 - loadIPPluginJar : add ucpd
+2021-12-09 10:41:50,204 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,204 [INFO] PluginManager:213 - loadIPPluginJar : add usart
+2021-12-09 10:41:50,207 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:50,207 [INFO] PluginManager:213 - loadIPPluginJar : add usbx
+2021-12-09 10:41:50,449 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-12-09 10:41:50,538 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-12-09 10:41:50,549 [INFO] DbMcusAds:47 - JSON generation date=Thu Sep 30 14:55:09 IRKT 2021 (1632984909377)
+2021-12-09 10:41:50,549 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-12-09 10:41:50,578 [WARN] DetailPanel:315 - Failed to get advertising image, set to default
+2021-12-09 10:41:50,677 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-12-09 10:41:50,679 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-12-09 10:41:50,679 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-12-09 10:41:50,680 [WARN] DetailPanel:315 - Failed to get advertising image, set to default
+2021-12-09 10:41:50,681 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-12-09 10:41:50,729 [INFO] Updater:1018 - Updater Version found : 6.4.0
+2021-12-09 10:41:50,746 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105
+2021-12-09 10:41:51,490 [INFO] MainUpdater:2729 - connection check result : 10
+2021-12-09 10:41:51,491 [INFO] MainUpdater:276 - Updater Check For Update Now.
+2021-12-09 10:41:51,491 [INFO] MicroXplorer:477 - Change Database Version : DB.6.0.40
+2021-12-09 10:41:51,651 [INFO] CheckServerUpdateThread:115 - End of CheckServer Thread
+2021-12-09 10:41:51,700 [INFO] MainUpdater:2729 - connection check result : 10
+2021-12-09 10:41:51,700 [INFO] MainUpdater:2729 - connection check result : 10
+2021-12-09 10:41:51,733 [INFO] MicroXplorer:447 - Change Database Path : 
+2021-12-09 10:41:51,734 [INFO] MicroXplorer:477 - Change Database Version : DB.6.0.40
+2021-12-09 10:41:51,734 [WARN] ThirdParty:823 - waiting for thirdparty lock release [close project]
+2021-12-09 10:41:52,737 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.6.2.2
+2021-12-09 10:41:52,747 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.2.2
+2021-12-09 10:41:52,788 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.0.0
+2021-12-09 10:41:52,897 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.18.0
+2021-12-09 10:41:52,929 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.2.0.0
+2021-12-09 10:41:52,952 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.1.0.0
+2021-12-09 10:41:52,982 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.1.0.0
+2021-12-09 10:41:53,009 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F7.1.0.0
+2021-12-09 10:41:53,060 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.1.0
+2021-12-09 10:41:53,218 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.1.0.0
+2021-12-09 10:41:53,229 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.2.0.0
+2021-12-09 10:41:53,238 [WARN] PackLoader:238 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.1.0
+2021-12-09 10:41:53,238 [INFO] ThirdParty:925 - Integrity check success = true
+2021-12-09 10:41:53,239 [INFO] IntegrityCheckThread:94 - exiting critical section [integrity check]
+2021-12-09 10:41:53,239 [INFO] IntegrityCheckThread:97 - End integrity checks thread
+2021-12-09 10:41:53,239 [INFO] ThirdParty:825 - entering critical section [close project]
+2021-12-09 10:41:53,240 [INFO] ThirdParty:835 - exiting critical section [close project]
+2021-12-09 10:41:53,250 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-12-09 10:41:53,256 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 520091928 Bytes (548405248)
+2021-12-09 10:41:53,257 [INFO] MicroXplorer:447 - Change Database Path : 
+2021-12-09 10:41:53,257 [INFO] MicroXplorer:477 - Change Database Version : DB.6.0.40
+2021-12-09 10:41:53,258 [INFO] OpenFileManager:313 - Change cursor
+2021-12-09 10:41:55,094 [INFO] Context:592 - Trying to add GPIOservice into a context  which must be forbidden
+2021-12-09 10:41:55,642 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,642 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,642 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,642 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,642 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,642 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,643 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,644 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,644 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,644 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,644 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,644 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,644 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,644 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,644 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-12-09 10:41:55,767 [WARN] ApiManager:304 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.1.0: no header file found
+2021-12-09 10:41:55,767 [WARN] ApiManager:304 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.1.0: no header file found
+2021-12-09 10:41:55,767 [WARN] ApiManager:304 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.1.0: no header file found
+2021-12-09 10:41:55,775 [WARN] ApiManager:304 - Cannot register API 'CMSIS:RTOS' from pack ARM.CMSIS.5.6.0: no header file found
+2021-12-09 10:41:55,779 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2021-12-09 10:41:55,779 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2021-12-09 10:41:55,779 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2021-12-09 10:41:55,779 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2021-12-09 10:41:55,779 [WARN] ModelIntegratedComponent:181 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2021-12-09 10:41:55,780 [WARN] ApiManager:304 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.2: no header file found
+2021-12-09 10:41:55,781 [WARN] ApiManager:304 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.2.2: no header file found
+2021-12-09 10:41:55,782 [WARN] ApiManager:304 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.1.0: no header file found
+2021-12-09 10:41:56,430 [INFO] RtosManager:791 - Current active RTOS is FREERTOS [Cortex-M4NS]
+2021-12-09 10:41:56,443 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 10:41:56,444 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 10:41:56,444 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 10:41:56,444 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 10:41:56,447 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (48MHZClocksFreq_Value) has invalid value (84000000)
+2021-12-09 10:41:56,448 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2021-12-09 10:41:56,742 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 551065720 Bytes (702545920)
+2021-12-09 10:41:56,746 [INFO] DbMcusXml:100 - Load MCU database from C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\/mcu/families.xml
+2021-12-09 10:41:57,410 [INFO] DbMcusJson:93 - JSON generation date=Wed Nov 17 00:17:54 IRKT 2021 (1637079474)
+2021-12-09 10:41:57,993 [INFO] DbMcus:175 - Found 1960 MCUs (1912 are supported by CubeMX, 1912 are visible in CubeMX)
+2021-12-09 10:41:57,996 [INFO] ApiDb:251 - Load user favorites file C:\Users\Sergey/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2021-12-09 10:41:57,997 [INFO] ApiDb:255 - User favorites MCUs=[]
+2021-12-09 10:41:57,997 [INFO] DbMcus:187 - Set 0 / 0 favorites MCUs
+2021-12-09 10:41:57,999 [WARN] ThirdParty:785 - waiting for thirdparty lock release [change project]
+2021-12-09 10:41:57,999 [INFO] ThirdParty:787 - entering critical section [change project]
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 2.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 1.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 1.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.1.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :ARM CMSIS 5.6.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2021-12-09 10:41:58,000 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.0.0
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.2
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.2.2
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 2.0.0
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.1.0
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2021-12-09 10:41:58,001 [INFO] ThirdParty:977 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.18.0
+2021-12-09 10:41:58,002 [INFO] ThirdParty:793 - exiting critical section [change project]
+2021-12-09 10:41:58,511 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-12-09 10:41:58,513 [INFO] PinOutPanel:1463 - setPackage(STM32F407VETx,LQFP100)
+2021-12-09 10:41:58,958 [INFO] UtilMem:74 - Before build in PCC Used Memory: 639868024 Bytes (859832320)
+2021-12-09 10:41:59,564 [INFO] UtilMem:74 - After build in PCC Used Memory: 575454552 Bytes (859832320)
+2021-12-09 10:41:59,635 [INFO] ApiDbMcu:488 - Load IP Config File for FREERTOS
+2021-12-09 10:41:59,673 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,673 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,673 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,673 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,673 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,674 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,674 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,674 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,674 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,674 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,674 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,675 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,675 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,675 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,675 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,675 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,675 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,675 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,676 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,676 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,676 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,676 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,677 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,677 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,677 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,678 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,678 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,678 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,679 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,679 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,679 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,679 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,680 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,680 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,680 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,681 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,681 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,681 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,682 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,682 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,683 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,683 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,683 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,684 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,684 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,685 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,685 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,686 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,686 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,687 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,687 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,688 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,689 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,690 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,691 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,692 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,693 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,693 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-12-09 10:41:59,703 [INFO] ApiDbMcu:488 - Load IP Config File for PDM2PCM
+2021-12-09 10:41:59,712 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 10:41:59,712 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 10:41:59,714 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 10:41:59,714 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 10:41:59,741 [WARN] FreeRTOS:1000 - Null or empty value: should not occur! (nothing added to the table)
+2021-12-09 10:41:59,937 [INFO] RtosManager:604 - Active RTOS found at IOC load: FREERTOS [Cortex-M4NS]
+2021-12-09 10:41:59,992 [INFO] OpenFileManager:333 - Restore cursor
+2021-12-09 10:42:00,087 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 10:42:00,087 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 10:42:00,088 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 10:42:00,088 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 10:42:00,091 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 10:42:00,091 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 10:42:00,091 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 10:42:00,092 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 10:46:25,667 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 10:47:16,085 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 10:47:16,086 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 10:47:16,086 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 10:47:16,086 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 10:47:16,086 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 10:47:16,086 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 10:47:16,086 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 10:47:16,087 [WARN] TasksAndQueuesTab:758 - 128 128
+2021-12-09 10:47:16,087 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 10:48:58,165 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 498394960 Bytes (859832320)
+2021-12-09 10:48:59,670 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 373882496 Bytes (859832320)
+2021-12-09 10:49:00,078 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: FREERTOS
+2021-12-09 10:49:00,079 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-12-09 10:49:00,079 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-12-09 10:49:00,079 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 10:49:00,079 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 10:49:00,079 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-12-09 10:49:00,079 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 10:49:00,079 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 10:49:00,079 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-12-09 10:49:00,080 [INFO] CodeGenerator:663 - code generatio: config db path: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\
+2021-12-09 10:49:00,095 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 10:49:00,095 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 10:49:00,096 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 10:49:00,096 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 10:49:00,543 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp_save
+2021-12-09 10:49:00,912 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp
+2021-12-09 10:49:00,968 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c_save
+2021-12-09 10:49:01,055 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c
+2021-12-09 10:49:01,059 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h_save
+2021-12-09 10:49:01,106 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h
+2021-12-09 10:49:01,376 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 10:49:01,381 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 10:49:01,418 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 10:49:01,421 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 10:49:01,465 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 10:49:01,468 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 10:49:01,508 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 10:49:01,510 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 10:49:01,553 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 10:49:01,555 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 10:49:01,596 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 10:49:01,599 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 10:49:01,639 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 10:49:01,642 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 10:49:01,693 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 10:49:01,705 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 10:49:01,710 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 10:49:01,749 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 10:49:01,752 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 10:49:01,791 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 10:49:01,794 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 10:49:01,835 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 10:49:01,839 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 10:49:01,881 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 10:49:01,884 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 10:49:01,923 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 10:49:01,926 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 10:49:01,964 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 10:49:01,968 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 10:49:02,007 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 10:49:02,012 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h_save
+2021-12-09 10:49:02,074 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h
+2021-12-09 10:49:02,079 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c_save
+2021-12-09 10:49:02,139 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c
+2021-12-09 10:49:02,146 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c_save
+2021-12-09 10:49:02,238 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c
+2021-12-09 10:49:02,241 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h_save
+2021-12-09 10:49:02,282 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h
+2021-12-09 10:49:02,288 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c_save
+2021-12-09 10:49:02,362 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c
+2021-12-09 10:49:02,365 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h_save
+2021-12-09 10:49:02,408 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h
+2021-12-09 10:49:02,422 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c_save
+2021-12-09 10:49:02,497 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c
+2021-12-09 10:49:02,502 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h_save
+2021-12-09 10:49:02,544 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h
+2021-12-09 10:49:02,554 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c_save
+2021-12-09 10:49:02,624 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c
+2021-12-09 10:49:02,632 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp_save
+2021-12-09 10:49:02,718 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp
+2021-12-09 10:49:02,725 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2021-12-09 10:49:02,823 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c
+2021-12-09 10:49:02,834 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-12-09 10:49:02,900 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h
+2021-12-09 10:49:03,003 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h_save
+2021-12-09 10:49:03,058 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h
+2021-12-09 10:49:03,062 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\main.c_save
+2021-12-09 10:49:03,139 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\main.c
+2021-12-09 10:49:04,616 [INFO] ProjectBuilder:2589 - Time for Copy HAL[1] : 794mS.
+2021-12-09 10:49:04,640 [INFO] ProjectBuilder:3665 - Project Generator version: 3.15.2
+2021-12-09 10:49:05,126 [INFO] ConfigFileManager:1273 - The Die is : DIE413
+2021-12-09 10:49:05,139 [INFO] ApiDbMcu:488 - Load IP Config File for FATFS
+2021-12-09 10:49:05,145 [INFO] ApiDbMcu:488 - Load IP Config File for LIBJPEG
+2021-12-09 10:49:05,206 [INFO] ApiDbMcu:488 - Load IP Config File for LWIP
+2021-12-09 10:49:05,243 [INFO] ApiDbMcu:488 - Load IP Config File for MBEDTLS
+2021-12-09 10:49:05,279 [INFO] ApiDbMcu:488 - Load IP Config File for USB_DEVICE
+2021-12-09 10:49:05,289 [INFO] ApiDbMcu:488 - Load IP Config File for USB_HOST
+2021-12-09 10:49:07,095 [INFO] ProjectBuilder:3832 - Time for Generating toolchain IDE Files: 2453mS.
+2021-12-09 10:49:07,096 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 1mS.
+2021-12-09 10:49:07,098 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 11:00:36,319 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 411041776 Bytes (877658112)
+2021-12-09 11:00:36,629 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: FREERTOS
+2021-12-09 11:00:36,630 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-12-09 11:00:36,630 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-12-09 11:00:36,630 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 11:00:36,630 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 11:00:36,630 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-12-09 11:00:36,630 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 11:00:36,630 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 11:00:36,630 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-12-09 11:00:36,631 [INFO] CodeGenerator:663 - code generatio: config db path: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\
+2021-12-09 11:00:36,643 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 11:00:36,643 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 11:00:36,645 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 11:00:36,645 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 11:00:37,168 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp_save
+2021-12-09 11:00:37,212 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp
+2021-12-09 11:00:37,267 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c_save
+2021-12-09 11:00:37,312 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c
+2021-12-09 11:00:37,315 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h_save
+2021-12-09 11:00:37,363 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h
+2021-12-09 11:00:37,619 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 11:00:37,624 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 11:00:37,660 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 11:00:37,663 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 11:00:37,703 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 11:00:37,705 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 11:00:37,743 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 11:00:37,745 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 11:00:37,788 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 11:00:37,790 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 11:00:37,831 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 11:00:37,834 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 11:00:37,897 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 11:00:37,901 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 11:00:37,939 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 11:00:37,950 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 11:00:37,955 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 11:00:37,994 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 11:00:37,997 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 11:00:38,055 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 11:00:38,057 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 11:00:38,097 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 11:00:38,099 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 11:00:38,142 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 11:00:38,144 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 11:00:38,183 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 11:00:38,187 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 11:00:38,226 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 11:00:38,229 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 11:00:38,268 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 11:00:38,272 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h_save
+2021-12-09 11:00:38,331 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h
+2021-12-09 11:00:38,336 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c_save
+2021-12-09 11:00:38,397 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c
+2021-12-09 11:00:38,405 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c_save
+2021-12-09 11:00:38,482 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c
+2021-12-09 11:00:38,487 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h_save
+2021-12-09 11:00:38,530 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h
+2021-12-09 11:00:38,537 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c_save
+2021-12-09 11:00:38,610 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c
+2021-12-09 11:00:38,613 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h_save
+2021-12-09 11:00:38,657 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h
+2021-12-09 11:00:38,670 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c_save
+2021-12-09 11:00:38,732 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c
+2021-12-09 11:00:38,736 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h_save
+2021-12-09 11:00:38,778 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h
+2021-12-09 11:00:38,788 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c_save
+2021-12-09 11:00:38,846 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c
+2021-12-09 11:00:38,850 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp_save
+2021-12-09 11:00:38,891 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp
+2021-12-09 11:00:38,893 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2021-12-09 11:00:38,941 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c
+2021-12-09 11:00:38,947 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-12-09 11:00:39,000 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h
+2021-12-09 11:00:39,040 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h_save
+2021-12-09 11:00:39,087 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h
+2021-12-09 11:00:39,090 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\main.c_save
+2021-12-09 11:00:39,175 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\main.c
+2021-12-09 11:00:39,904 [INFO] ProjectBuilder:2589 - Time for Copy HAL[1] : 184mS.
+2021-12-09 11:00:39,909 [INFO] ProjectBuilder:3665 - Project Generator version: 3.15.2
+2021-12-09 11:00:40,386 [INFO] ConfigFileManager:1273 - The Die is : DIE413
+2021-12-09 11:00:41,792 [INFO] ProjectBuilder:3832 - Time for Generating toolchain IDE Files: 1883mS.
+2021-12-09 11:00:41,793 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 11:00:41,795 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 14:34:47,604 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,604 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,605 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,605 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,607 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,607 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,608 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,608 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,752 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 14:34:47,803 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,804 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,804 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,804 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,806 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,806 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,807 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,807 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,908 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 14:34:47,982 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,982 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,983 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,983 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,985 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,985 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,986 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:47,986 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:48,089 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 14:34:57,924 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:57,924 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:57,925 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:57,925 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:57,927 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:57,927 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:57,927 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:57,928 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,019 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 14:34:58,062 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,062 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,062 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,062 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,064 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,065 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,065 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,065 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,151 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 14:34:58,227 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,227 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,227 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,227 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,229 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,230 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,230 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,230 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:34:58,320 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 14:35:09,111 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 947825248 Bytes (1000341504)
+2021-12-09 14:35:11,554 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 763581680 Bytes (1017118720)
+2021-12-09 14:35:12,359 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 498408512 Bytes (1017118720)
+2021-12-09 14:35:12,712 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: FREERTOS
+2021-12-09 14:35:12,712 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-12-09 14:35:12,712 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-12-09 14:35:12,712 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 14:35:12,712 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 14:35:12,712 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-12-09 14:35:12,712 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 14:35:12,712 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 14:35:12,713 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-12-09 14:35:12,713 [INFO] CodeGenerator:663 - code generatio: config db path: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\
+2021-12-09 14:35:12,723 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:35:12,723 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:35:12,724 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:35:12,724 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:35:13,134 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp_save
+2021-12-09 14:35:13,211 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp
+2021-12-09 14:35:13,244 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c_save
+2021-12-09 14:35:13,362 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c
+2021-12-09 14:35:13,366 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h_save
+2021-12-09 14:35:13,411 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h
+2021-12-09 14:35:13,646 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 14:35:13,651 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 14:35:13,693 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 14:35:13,696 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 14:35:13,739 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 14:35:13,741 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 14:35:13,782 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 14:35:13,784 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 14:35:13,824 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 14:35:13,826 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 14:35:13,866 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 14:35:13,868 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 14:35:13,905 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 14:35:13,907 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 14:35:13,948 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 14:35:13,960 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 14:35:13,965 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 14:35:14,002 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 14:35:14,007 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 14:35:14,046 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 14:35:14,049 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 14:35:14,088 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 14:35:14,090 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 14:35:14,132 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 14:35:14,135 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 14:35:14,172 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 14:35:14,175 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 14:35:14,213 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 14:35:14,216 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 14:35:14,255 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 14:35:14,258 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h_save
+2021-12-09 14:35:14,317 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h
+2021-12-09 14:35:14,320 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c_save
+2021-12-09 14:35:14,386 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c
+2021-12-09 14:35:14,393 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c_save
+2021-12-09 14:35:14,475 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c
+2021-12-09 14:35:14,479 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h_save
+2021-12-09 14:35:14,524 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h
+2021-12-09 14:35:14,546 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c_save
+2021-12-09 14:35:14,619 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c
+2021-12-09 14:35:14,622 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h_save
+2021-12-09 14:35:14,664 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h
+2021-12-09 14:35:14,677 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c_save
+2021-12-09 14:35:14,734 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c
+2021-12-09 14:35:14,737 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h_save
+2021-12-09 14:35:14,778 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h
+2021-12-09 14:35:14,786 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c_save
+2021-12-09 14:35:14,846 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c
+2021-12-09 14:35:14,849 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp_save
+2021-12-09 14:35:14,886 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp
+2021-12-09 14:35:14,889 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2021-12-09 14:35:14,937 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c
+2021-12-09 14:35:14,942 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-12-09 14:35:14,991 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h
+2021-12-09 14:35:15,031 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h_save
+2021-12-09 14:35:15,075 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h
+2021-12-09 14:35:15,077 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\main.c_save
+2021-12-09 14:35:15,136 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\main.c
+2021-12-09 14:35:15,919 [INFO] ProjectBuilder:2589 - Time for Copy HAL[1] : 172mS.
+2021-12-09 14:35:15,924 [INFO] ProjectBuilder:3665 - Project Generator version: 3.15.2
+2021-12-09 14:35:16,415 [INFO] ConfigFileManager:1273 - The Die is : DIE413
+2021-12-09 14:35:17,870 [INFO] ProjectBuilder:3832 - Time for Generating toolchain IDE Files: 1946mS.
+2021-12-09 14:35:17,871 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 14:35:17,873 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 14:36:08,174 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 455267648 Bytes (1021313024)
+2021-12-09 14:36:08,445 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: FREERTOS
+2021-12-09 14:36:08,445 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-12-09 14:36:08,445 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-12-09 14:36:08,445 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 14:36:08,445 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 14:36:08,445 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-12-09 14:36:08,445 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 14:36:08,445 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 14:36:08,446 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-12-09 14:36:08,446 [INFO] CodeGenerator:663 - code generatio: config db path: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\
+2021-12-09 14:36:08,455 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:36:08,455 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:36:08,456 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:36:08,456 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:36:08,952 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp_save
+2021-12-09 14:36:08,991 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp
+2021-12-09 14:36:09,021 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c_save
+2021-12-09 14:36:09,080 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c
+2021-12-09 14:36:09,083 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h_save
+2021-12-09 14:36:09,125 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h
+2021-12-09 14:36:09,349 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 14:36:09,353 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 14:36:09,388 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 14:36:09,389 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 14:36:09,426 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 14:36:09,428 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 14:36:09,464 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 14:36:09,465 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 14:36:09,503 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 14:36:09,505 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 14:36:09,544 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 14:36:09,546 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 14:36:09,602 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 14:36:09,604 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 14:36:09,640 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 14:36:09,650 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 14:36:09,655 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 14:36:09,691 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 14:36:09,694 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 14:36:09,756 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 14:36:09,759 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 14:36:09,795 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 14:36:09,798 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 14:36:09,837 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 14:36:09,840 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 14:36:09,876 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 14:36:09,879 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 14:36:09,916 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 14:36:09,919 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 14:36:09,957 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 14:36:09,959 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h_save
+2021-12-09 14:36:10,018 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h
+2021-12-09 14:36:10,020 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c_save
+2021-12-09 14:36:10,079 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c
+2021-12-09 14:36:10,085 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c_save
+2021-12-09 14:36:10,152 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c
+2021-12-09 14:36:10,155 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h_save
+2021-12-09 14:36:10,196 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h
+2021-12-09 14:36:10,202 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c_save
+2021-12-09 14:36:10,271 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c
+2021-12-09 14:36:10,274 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h_save
+2021-12-09 14:36:10,315 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h
+2021-12-09 14:36:10,326 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c_save
+2021-12-09 14:36:10,382 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c
+2021-12-09 14:36:10,385 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h_save
+2021-12-09 14:36:10,425 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h
+2021-12-09 14:36:10,432 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c_save
+2021-12-09 14:36:10,491 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c
+2021-12-09 14:36:10,493 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp_save
+2021-12-09 14:36:10,529 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp
+2021-12-09 14:36:10,531 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2021-12-09 14:36:10,574 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c
+2021-12-09 14:36:10,579 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-12-09 14:36:10,628 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h
+2021-12-09 14:36:10,663 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h_save
+2021-12-09 14:36:10,707 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h
+2021-12-09 14:36:10,710 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\main.c_save
+2021-12-09 14:36:10,793 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\main.c
+2021-12-09 14:36:11,430 [INFO] ProjectBuilder:2589 - Time for Copy HAL[1] : 125mS.
+2021-12-09 14:36:11,434 [INFO] ProjectBuilder:3665 - Project Generator version: 3.15.2
+2021-12-09 14:36:11,941 [INFO] ConfigFileManager:1273 - The Die is : DIE413
+2021-12-09 14:36:13,244 [INFO] ProjectBuilder:3832 - Time for Generating toolchain IDE Files: 1810mS.
+2021-12-09 14:36:13,244 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 14:36:13,247 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 14:38:54,355 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,356 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,356 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,356 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,358 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,358 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,358 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,359 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,431 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 14:38:54,468 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,468 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,468 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,468 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,470 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,470 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,471 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,471 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,538 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 14:38:54,576 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,576 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,577 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,577 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,579 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,579 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,579 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,579 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,646 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 14:38:54,693 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,693 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,693 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,693 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,695 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,695 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,696 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,696 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:38:54,774 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 14:39:06,333 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 14:39:06,333 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 14:39:06,333 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 14:39:06,333 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 14:39:06,334 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 14:39:06,334 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 14:39:06,334 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 14:39:06,334 [WARN] TasksAndQueuesTab:758 - 128 128
+2021-12-09 14:39:06,334 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 14:39:11,717 [INFO] EditThreadDialog:699 - RAM SIZE (in KB): 128
+2021-12-09 14:39:11,717 [INFO] EditThreadDialog:701 - RAM SIZE (in words): 32768
+2021-12-09 14:39:17,064 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 14:39:17,064 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 14:39:17,064 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 14:39:17,064 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 14:39:17,064 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 14:39:17,064 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 14:39:17,064 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 14:39:17,064 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 14:39:17,064 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 14:39:50,670 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 453685280 Bytes (1021313024)
+2021-12-09 14:41:10,608 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 449495232 Bytes (1021313024)
+2021-12-09 14:41:10,881 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: FREERTOS
+2021-12-09 14:41:10,881 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-12-09 14:41:10,881 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-12-09 14:41:10,881 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 14:41:10,881 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 14:41:10,881 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-12-09 14:41:10,881 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 14:41:10,881 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 14:41:10,882 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-12-09 14:41:10,882 [INFO] CodeGenerator:663 - code generatio: config db path: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\
+2021-12-09 14:41:10,890 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:41:10,891 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:41:10,892 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 14:41:10,892 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 14:41:11,380 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp_save
+2021-12-09 14:41:11,417 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp
+2021-12-09 14:41:11,447 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c_save
+2021-12-09 14:41:11,505 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c
+2021-12-09 14:41:11,508 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h_save
+2021-12-09 14:41:11,548 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h
+2021-12-09 14:41:11,767 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 14:41:11,771 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 14:41:11,805 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 14:41:11,807 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 14:41:11,863 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 14:41:11,864 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 14:41:11,901 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 14:41:11,902 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 14:41:11,939 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 14:41:11,941 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 14:41:12,004 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 14:41:12,006 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 14:41:12,044 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 14:41:12,046 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 14:41:12,081 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 14:41:12,091 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 14:41:12,096 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 14:41:12,132 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 14:41:12,134 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 14:41:12,172 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 14:41:12,174 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 14:41:12,210 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 14:41:12,212 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 14:41:12,252 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 14:41:12,255 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 14:41:12,292 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 14:41:12,295 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 14:41:12,333 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 14:41:12,336 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 14:41:12,373 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 14:41:12,376 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h_save
+2021-12-09 14:41:12,431 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h
+2021-12-09 14:41:12,434 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c_save
+2021-12-09 14:41:12,498 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c
+2021-12-09 14:41:12,504 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c_save
+2021-12-09 14:41:12,571 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c
+2021-12-09 14:41:12,573 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h_save
+2021-12-09 14:41:12,614 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h
+2021-12-09 14:41:12,620 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c_save
+2021-12-09 14:41:12,688 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c
+2021-12-09 14:41:12,691 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h_save
+2021-12-09 14:41:12,731 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h
+2021-12-09 14:41:12,742 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c_save
+2021-12-09 14:41:12,798 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c
+2021-12-09 14:41:12,800 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h_save
+2021-12-09 14:41:12,840 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h
+2021-12-09 14:41:12,847 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c_save
+2021-12-09 14:41:12,914 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c
+2021-12-09 14:41:12,916 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp_save
+2021-12-09 14:41:12,954 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp
+2021-12-09 14:41:12,956 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2021-12-09 14:41:13,020 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c
+2021-12-09 14:41:13,025 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-12-09 14:41:13,091 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h
+2021-12-09 14:41:13,127 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h_save
+2021-12-09 14:41:13,172 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h
+2021-12-09 14:41:13,175 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\main.c_save
+2021-12-09 14:41:13,241 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\main.c
+2021-12-09 14:41:13,960 [INFO] ProjectBuilder:2589 - Time for Copy HAL[1] : 140mS.
+2021-12-09 14:41:13,964 [INFO] ProjectBuilder:3665 - Project Generator version: 3.15.2
+2021-12-09 14:41:14,368 [INFO] ConfigFileManager:1273 - The Die is : DIE413
+2021-12-09 14:41:15,670 [INFO] ProjectBuilder:3832 - Time for Generating toolchain IDE Files: 1706mS.
+2021-12-09 14:41:15,671 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 14:41:15,673 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 15:06:29,434 [ERROR] RtosPanel:553 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-12-09 15:06:31,455 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 15:06:31,455 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 15:06:31,455 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 15:06:31,456 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 15:06:31,456 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 15:06:31,456 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 15:06:31,456 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 15:06:31,456 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 15:06:31,456 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 15:06:33,241 [INFO] EditThreadDialog:699 - RAM SIZE (in KB): 128
+2021-12-09 15:06:33,241 [INFO] EditThreadDialog:701 - RAM SIZE (in words): 32768
+2021-12-09 15:07:12,884 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 15:07:12,885 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 15:07:12,885 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 15:07:12,885 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 15:07:12,885 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 15:07:12,885 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 15:07:12,885 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 15:07:12,885 [WARN] TasksAndQueuesTab:758 - 256 128
+2021-12-09 15:07:12,885 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 15:07:12,885 [INFO] TasksAndQueuesTab:752 - Dynamic
+2021-12-09 15:07:12,885 [WARN] TasksAndQueuesTab:758 - 128 128
+2021-12-09 15:07:12,885 [WARN] TasksAndQueuesTab:770 - max value is: 3840.0
+2021-12-09 15:07:35,259 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 654118728 Bytes (1053818880)
+2021-12-09 15:07:37,534 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 708122440 Bytes (1053818880)
+2021-12-09 15:07:38,507 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 510899568 Bytes (1053818880)
+2021-12-09 15:07:38,796 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: FREERTOS
+2021-12-09 15:07:38,796 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-12-09 15:07:38,796 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-12-09 15:07:38,796 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 15:07:38,796 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: I2C
+2021-12-09 15:07:38,796 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-12-09 15:07:38,796 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 15:07:38,796 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-12-09 15:07:38,797 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-12-09 15:07:38,797 [INFO] CodeGenerator:663 - code generatio: config db path: C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.4.0.202111222105\\db\
+2021-12-09 15:07:38,806 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 15:07:38,806 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 15:07:38,807 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 15:07:38,807 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 15:07:39,315 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp_save
+2021-12-09 15:07:39,427 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\license.tmp
+2021-12-09 15:07:39,462 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c_save
+2021-12-09 15:07:39,507 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\gpio.c
+2021-12-09 15:07:39,510 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h_save
+2021-12-09 15:07:39,552 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\gpio.h
+2021-12-09 15:07:39,785 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 15:07:39,789 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 15:07:39,826 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 15:07:39,828 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 15:07:39,865 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 15:07:39,867 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 15:07:39,905 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 15:07:39,907 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 15:07:39,945 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 15:07:39,947 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 15:07:39,984 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 15:07:39,986 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 15:07:40,043 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 15:07:40,045 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 15:07:40,084 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 15:07:40,096 [INFO] Middleware:1388 - No code input for Bsp Dependency
+2021-12-09 15:07:40,100 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp_save
+2021-12-09 15:07:40,136 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_inc.tmp
+2021-12-09 15:07:40,138 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp_save
+2021-12-09 15:07:40,199 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_vars.tmp
+2021-12-09 15:07:40,202 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp_save
+2021-12-09 15:07:40,238 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_pfp.tmp
+2021-12-09 15:07:40,241 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp_save
+2021-12-09 15:07:40,281 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_obj_creat.tmp
+2021-12-09 15:07:40,284 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp_save
+2021-12-09 15:07:40,320 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_kernelStart.tmp
+2021-12-09 15:07:40,322 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp_save
+2021-12-09 15:07:40,362 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_default_thread.tmp
+2021-12-09 15:07:40,365 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp_save
+2021-12-09 15:07:40,403 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\rtos_threads.tmp
+2021-12-09 15:07:40,405 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h_save
+2021-12-09 15:07:40,461 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\FreeRTOSConfig.h
+2021-12-09 15:07:40,464 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c_save
+2021-12-09 15:07:40,524 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\freertos.c
+2021-12-09 15:07:40,530 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c_save
+2021-12-09 15:07:40,598 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\i2c.c
+2021-12-09 15:07:40,600 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h_save
+2021-12-09 15:07:40,641 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\i2c.h
+2021-12-09 15:07:40,647 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c_save
+2021-12-09 15:07:40,714 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\usart.c
+2021-12-09 15:07:40,716 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h_save
+2021-12-09 15:07:40,757 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\usart.h
+2021-12-09 15:07:40,769 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c_save
+2021-12-09 15:07:40,824 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_it.c
+2021-12-09 15:07:40,827 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h_save
+2021-12-09 15:07:40,869 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_it.h
+2021-12-09 15:07:40,874 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c_save
+2021-12-09 15:07:40,932 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_msp.c
+2021-12-09 15:07:40,935 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp_save
+2021-12-09 15:07:40,972 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\MXTmpFiles\system.tmp
+2021-12-09 15:07:40,975 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2021-12-09 15:07:41,020 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\stm32f4xx_hal_timebase_tim.c
+2021-12-09 15:07:41,025 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-12-09 15:07:41,072 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\stm32f4xx_hal_conf.h
+2021-12-09 15:07:41,108 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h_save
+2021-12-09 15:07:41,151 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Inc\main.h
+2021-12-09 15:07:41,154 [INFO] CodeEngine:239 - oldGeneratedFile, D:\Kicads Schem\testemHash\tester407\Core\Src\main.c_save
+2021-12-09 15:07:41,221 [INFO] CodeEngine:257 - Generated code: D:\Kicads Schem\testemHash\tester407\Core\Src\main.c
+2021-12-09 15:07:41,919 [INFO] ProjectBuilder:2589 - Time for Copy HAL[1] : 128mS.
+2021-12-09 15:07:41,924 [INFO] ProjectBuilder:3665 - Project Generator version: 3.15.2
+2021-12-09 15:07:42,288 [INFO] ConfigFileManager:1273 - The Die is : DIE413
+2021-12-09 15:07:43,832 [INFO] ProjectBuilder:3832 - Time for Generating toolchain IDE Files: 1908mS.
+2021-12-09 15:07:43,832 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 15:07:43,834 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-09 15:18:21,659 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 15:18:21,659 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 15:18:21,664 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 15:18:21,664 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 15:18:31,651 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,722x387,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-12-09 15:18:34,328 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 15:18:34,328 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 15:18:34,331 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2021-12-09 15:18:34,331 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-12-09 15:34:35,911 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 

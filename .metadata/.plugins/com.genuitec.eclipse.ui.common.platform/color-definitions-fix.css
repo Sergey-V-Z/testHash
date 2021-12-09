@@ -1866,7 +1866,8 @@ IEclipsePreferences#org-eclipse-jdt-ui {
 		'semanticHighlighting.parameterVariable.italic=false'
 		'semanticHighlighting.parameterVariable.strikethrough=false'
 		'semanticHighlighting.parameterVariable.underline=false'
-		'semanticHighlighting.recordKeyword.color=197,116,48'
+		'semanticHighlighting.restrictedKeywords.bold=false'
+		'semanticHighlighting.restrictedKeywords.color=197,104,28'
 		'semanticHighlighting.staticField.bold=false'
 		'semanticHighlighting.staticField.color=239,192,144'
 		'semanticHighlighting.staticField.enabled=true'
@@ -1897,8 +1898,6 @@ IEclipsePreferences#org-eclipse-jdt-ui {
 		'semanticHighlighting.typeParameter.italic=false'
 		'semanticHighlighting.typeParameter.strikethrough=false'
 		'semanticHighlighting.typeParameter.underline=false'
-		'semanticHighlighting.varKeyword.color=197,116,48'
-		'semanticHighlighting.yieldKeyword.color=197,116,48'
 		'sourceHoverBackgroundColor=0,0,0'
 }
 IEclipsePreferences#org-eclipse-jst-jsp-ui {
@@ -2167,7 +2166,7 @@ IEclipsePreferences#org-eclipse-ui-workbench {
 		'org.eclipse.egit.ui.UncommittedChangeBackgroundColor=25,29,31'
 		'org.eclipse.egit.ui.UncommittedChangeForegroundColor=216,220,223'
 		'org.eclipse.jdt.ui.ColoredLabels.inherited=143,143,191'
-		'org.eclipse.jdt.ui.ColoredLabels.writeaccess_highlight=52,46,35'
+		'org.eclipse.jdt.ui.ColoredLabels.writeaccess_highlight=255,128,128'
 		'org.eclipse.jdt.ui.Javadoc.backgroundColor=48,54,59'
 		'org.eclipse.jdt.ui.Javadoc.foregroundColor=235,237,239'
 		'org.eclipse.jdt.ui.abstractMethodInvocationHighlighting=255,255,255'

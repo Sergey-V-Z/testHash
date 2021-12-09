@@ -26,6 +26,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "stdio.h"
 #include "string.h"
 #include "ssd1306.h"
 //#include "ssd1306_tests.h"
@@ -67,16 +68,19 @@ uint8_t readASIC[540] = { 0x00 };
 //обшие переменные
 uint8_t start = 0; // запуск процедуры проверки
 uint8_t ready = 0; // готовнеость питаня
+GPIO_PinState plug = GPIO_PIN_RESET; //присутствие платы
 
 //переменные для таймеров
 extern uint32_t uartTIM ;
 extern uint8_t status_uartTIM;
+extern uint32_t counterRefresh;
 
 
 /* USER CODE END Variables */
 osThreadId testTaskHandle;
 osThreadId lcdTaskHandle;
 osThreadId I2C_TaskHandle;
+osThreadId buttonTaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -87,6 +91,7 @@ osThreadId I2C_TaskHandle;
 void TestTask(void const * argument);
 void LCDTask(void const * argument);
 void i2c_Task(void const * argument);
+void ButtonTask(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -111,7 +116,7 @@ void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer,
   * @param  None
   * @retval None
   */
-   void MX_FREERTOS_Init(void) {
+void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
@@ -142,8 +147,12 @@ void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer,
   lcdTaskHandle = osThreadCreate(osThread(lcdTask), NULL);
 
   /* definition and creation of I2C_Task */
-  osThreadDef(I2C_Task, i2c_Task, osPriorityNormal, 0, 128);
+  osThreadDef(I2C_Task, i2c_Task, osPriorityNormal, 0, 256);
   I2C_TaskHandle = osThreadCreate(osThread(I2C_Task), NULL);
+
+  /* definition and creation of buttonTask */
+  osThreadDef(buttonTask, ButtonTask, osPriorityNormal, 0, 128);
+  buttonTaskHandle = osThreadCreate(osThread(buttonTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
 	/* add threads, ... */
@@ -208,11 +217,16 @@ void TestTask(void const * argument)
 				//посчитать количесво асиков
 
 				pre_count_ASIC = counter_bytes / 9;
-				itoa(pre_count_ASIC, (char*)snum, 10);
+				if(!start){
+					pre_count_ASIC = 0;
+				}
+				//itoa(pre_count_ASIC, (char*)snum, 10);
+				sprintf((char*)snum, "%-2d", (int)pre_count_ASIC);
 
-			    ssd1306_SetCursor(2, 0);
-			    ssd1306_WriteString((char*)snum, Font_16x26, White);
-			    ssd1306_UpdateScreen();
+				//ssd1306_Fill(Black); //чистим экран
+			    ssd1306_SetCursor(2, 28);
+			    ssd1306_WriteString((char*)snum, Font_11x18, White);
+			    //ssd1306_UpdateScreen();
 
 				counter_bytes = 0;
 				memset(readASIC, 0, sizeof readASIC);
@@ -222,7 +236,7 @@ void TestTask(void const * argument)
 			}
 
 	}
-	//osDelay(1);
+	osDelay(1);
 }
   /* USER CODE END TestTask */
 }
@@ -238,36 +252,41 @@ void LCDTask(void const * argument)
 {
   /* USER CODE BEGIN LCDTask */
 
-	RV_BUTTON button1(B1_GPIO_Port, B1_Pin, HIGH_PULL, NORM_OPEN);
-	RV_BUTTON button2(B2_GPIO_Port, B2_Pin, HIGH_PULL, NORM_OPEN);
-	RV_BUTTON button3(B3_GPIO_Port, B3_Pin, HIGH_PULL, NORM_OPEN);
 
-	button1.isClick();
-	button2.isClick();
-	button3.isClick();
+	uint8_t blink = 0;
+
+	ssd1306_Init();
 
 
 	//ssd1306_TestAll();
-    ssd1306_SetCursor(2, 28);
-    ssd1306_WriteString("Start", Font_16x26, White);
+    ssd1306_SetCursor(2, 0);
+    ssd1306_WriteString((char*) "Tester hash v1", Font_7x10, White);
     ssd1306_UpdateScreen();
 
 /* Infinite loop */
 for (;;) {
-	button1.tick();
-	button2.tick();
-	button3.tick();
 
-	if (button1.isClick() ){
-		if (start == 0) {
-			start = 1;
+
+	if(counterRefresh >= 500){
+		//ssd1306_SetCursor(100, 56);
+		if (blink == 0) {
+			ssd1306_DrawCircle(100, 56, 4, White);
+			//ssd1306_UpdateScreen();
+			blink = 1;
+			counterRefresh = 0;
 		}else {
-			start = 0;
+			ssd1306_DrawCircle(100, 56, 4, Black);
+			//ssd1306_UpdateScreen();
+			blink = 0;
+			counterRefresh = 0;
 		}
 
 	}
 
-	osDelay(1);
+
+	ssd1306_UpdateScreen();
+
+	osDelay(84);
 }
   /* USER CODE END LCDTask */
 }
@@ -287,7 +306,6 @@ void i2c_Task(void const * argument)
 	uint16_t addr = 0x20;
 	addr = addr<<1;
 
-	GPIO_PinState plug = GPIO_PIN_RESET;
 
 	uint8_t cmdStart_1[6] = { 0x55, 0xAA, 0x04, 0x07, 0x00, 0x0B };
 	uint8_t cmdRead_1[2] = { 0x00 };// 0x07 0x01
@@ -313,38 +331,79 @@ void i2c_Task(void const * argument)
 	HAL_GPIO_WritePin(A2_GPIO_Port, A2_Pin, GPIO_PIN_RESET);
 
 
-	plug = HAL_GPIO_ReadPin(PLUG_GPIO_Port, PLUG_Pin);
+
 
   /* Infinite loop */
   for(;;)
   {
+	  plug = HAL_GPIO_ReadPin(PLUG_GPIO_Port, PLUG_Pin);
 
 	  if (start && plug) {
 					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_1, 6, 20);
 					osDelay(200);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_1[0], 1, 20);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_1[1], 1, 20);
+					//проверить ответ
+					if (cmdRead_1[0] != 0x07 && cmdRead_1[1] != 0x01) {
+						start = 0;
+						ready = 0;
+						ssd1306_Fill(Black); //чистим экран
+					    ssd1306_SetCursor(2, 0);
+					    ssd1306_WriteString((char*) "error", Font_7x10, White);
+					    //ssd1306_UpdateScreen();
+						continue;
+					}
 					osDelay(300);
 
 					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_2, 6, 20);
 					osDelay(200);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_2[0], 1, 20);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_2[1], 1, 20);
+					//проверить ответ
+					if (cmdRead_2[0] != 0x06 && cmdRead_2[1] != 0x01) {
+						start = 0;
+						ready = 0;
+						ssd1306_Fill(Black); //чистим экран
+					    ssd1306_SetCursor(2, 0);
+					    ssd1306_WriteString((char*) "error", Font_7x10, White);
+					    //ssd1306_UpdateScreen();
+						continue;
+					}
 					osDelay(1000);
 
 					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_3, 9, 20);
 					osDelay(100);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_3[0], 1, 20);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_3[1], 1, 20);
+					//проверить ответ
+					if (cmdRead_3[0] != 0x10 && cmdRead_3[1] != 0x01) {
+						start = 0;
+						ready = 0;
+						ssd1306_Fill(Black); //чистим экран
+					    ssd1306_SetCursor(2, 0);
+					    ssd1306_WriteString((char*) "error", Font_7x10, White);
+					    //ssd1306_UpdateScreen();
+						continue;
+					}
 					osDelay(1000);
 
 					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_4, 7, 20);
 					osDelay(710);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_4[0], 1, 20);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_4[1], 1, 20);
+					//проверить ответ
+					if (cmdRead_4[0] != 0x15 && cmdRead_4[1] != 0x01) {
+						start = 0;
+						ready = 0;
+						ssd1306_Fill(Black); //чистим экран
+					    ssd1306_SetCursor(2, 0);
+					    ssd1306_WriteString((char*) "error", Font_7x10, White);
+					    //ssd1306_UpdateScreen();
+						continue;
+					}
 
 
-					osDelay(1000);
+					osDelay(500);
 					//выдать флаг готовности питания
 					ready = 1;
 
@@ -365,6 +424,7 @@ void i2c_Task(void const * argument)
 							status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_Refresh[4], 1, 20);
 							status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_Refresh[5], 1, 20);
 
+							//ожидаем 10 секунд и обновляем пик если за это время был останов то выходим из цикла
 							for (int var = 0; var < 10000; ++var) {
 								if(!start){
 									break;
@@ -387,9 +447,70 @@ void i2c_Task(void const * argument)
 					ready = 0;
 	  }
 
+	  osDelay(1);
   }
 
   /* USER CODE END i2c_Task */
+}
+
+/* USER CODE BEGIN Header_ButtonTask */
+/**
+* @brief Function implementing the buttonTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_ButtonTask */
+void ButtonTask(void const * argument)
+{
+  /* USER CODE BEGIN ButtonTask */
+
+	RV_BUTTON button1(B1_GPIO_Port, B1_Pin, HIGH_PULL, NORM_OPEN);
+	RV_BUTTON button2(B2_GPIO_Port, B2_Pin, HIGH_PULL, NORM_OPEN);
+	RV_BUTTON button3(B3_GPIO_Port, B3_Pin, HIGH_PULL, NORM_OPEN);
+	uint8_t snum[5];
+
+	button1.isClick();
+	button2.isClick();
+	button3.isClick();
+
+  /* Infinite loop */
+  for(;;)
+  {
+	button1.tick();
+	//button2.tick();
+	//button3.tick();
+
+	if (button1.isClick() ){
+		if (start == 0 && plug == GPIO_PIN_SET) {
+			start = 1;
+			//ssd1306_Fill(Black); //чистим экран
+			ssd1306_SetCursor(2, 0);
+			ssd1306_WriteString((char*) "Test started   ", Font_7x10, White);
+			//ssd1306_UpdateScreen();
+
+		}else if(start == 1 && plug == GPIO_PIN_SET){
+			start = 0;
+			//ssd1306_Fill(Black); //чистим экран
+			ssd1306_SetCursor(2, 0);
+			ssd1306_WriteString((char*) "Test stoped     ", Font_7x10, White);
+
+			sprintf((char*)snum, "%-2d", 0);
+		    ssd1306_SetCursor(2, 28);
+		    ssd1306_WriteString((char*)snum, Font_11x18, White);
+
+			//ssd1306_UpdateScreen();
+		}else {
+			start = 0;
+			//ssd1306_Fill(Black); //чистим экран
+			ssd1306_SetCursor(2, 0);
+			ssd1306_WriteString((char*) "No plug        ", Font_7x10, White);
+			//ssd1306_UpdateScreen();
+		}
+
+	}
+    osDelay(1);
+  }
+  /* USER CODE END ButtonTask */
 }
 
 /* Private application code --------------------------------------------------*/

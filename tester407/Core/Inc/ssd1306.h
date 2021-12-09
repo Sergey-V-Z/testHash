@@ -14,6 +14,7 @@
 _BEGIN_STD_C
 
 #include "ssd1306_conf.h"
+#include "cmsis_os.h"
 
 #if defined(STM32F0)
 #include "stm32f0xx_hal.h"
@@ -92,6 +93,8 @@ extern SPI_HandleTypeDef SSD1306_SPI_PORT;
 #else
 #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro!"
 #endif
+
+extern osMutexId mutex_OLEDHandle;
 
 // SSD1306 OLED height in pixels
 #ifndef SSD1306_HEIGHT

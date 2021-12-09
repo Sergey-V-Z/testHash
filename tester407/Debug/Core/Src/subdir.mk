@@ -5,10 +5,8 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/freertos.c \
 ../Core/Src/gpio.c \
 ../Core/Src/i2c.c \
-../Core/Src/main.c \
 ../Core/Src/ssd1306.c \
 ../Core/Src/ssd1306_fonts.c \
 ../Core/Src/ssd1306_tests.c \
@@ -26,10 +24,8 @@ CPP_SRCS += \
 ../Core/Src/main.cpp 
 
 C_DEPS += \
-./Core/Src/freertos.d \
 ./Core/Src/gpio.d \
 ./Core/Src/i2c.d \
-./Core/Src/main.d \
 ./Core/Src/ssd1306.d \
 ./Core/Src/ssd1306_fonts.d \
 ./Core/Src/ssd1306_tests.d \
