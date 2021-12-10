@@ -9054,3 +9054,35 @@
 2021-12-09 15:18:34,331 [WARN] IP:2107 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
 2021-12-09 15:18:34,331 [WARN] IP:2107 - Analog_Filter not found: check if there is a RefParameter without a condition.
 2021-12-09 15:34:35,911 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-09 15:55:23,520 [INFO] Activator:177 - 
+
+
+2021-12-09 15:55:23,521 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-09 15:55:24,518 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-09 15:55:24,522 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-09 15:55:24,525 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-09 15:55:27,642 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 09, 2021 3:55:27 PM org.glassfish.grizzly.http.server.NetworkListener start
+2021-12-09 15:55:27,644 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: Started listener bound to [localhost:1596]
+2021-12-09 15:55:27,644 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-09 15:55:27,645 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 09, 2021 3:55:27 PM org.glassfish.grizzly.http.server.HttpServer start
+2021-12-09 15:55:27,646 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: [HttpServer] Started.
+2021-12-09 15:55:27,646 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-09 15:55:29,036 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2021-12-09 15:57:22,901 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-10 11:50:16,163 [INFO] Activator:177 - 
+
+
+2021-12-10 11:50:16,164 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-10 11:50:17,018 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-10 11:50:17,021 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-10 11:50:17,024 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-10 11:50:20,039 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 10, 2021 11:50:20 AM org.glassfish.grizzly.http.server.NetworkListener start
+2021-12-10 11:50:20,042 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: Started listener bound to [localhost:1594]
+2021-12-10 11:50:20,042 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-10 11:50:20,043 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] ???. 10, 2021 11:50:20 AM org.glassfish.grizzly.http.server.HttpServer start
+2021-12-10 11:50:20,044 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: [HttpServer] Started.
+2021-12-10 11:50:20,044 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2021-12-10 11:50:21,506 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2021-12-10 11:51:00,365 [INFO] RetryExec:97 - I/O exception (java.net.SocketException) caught when processing request to {}->http://sw-center.st.com:80: Socket closed
+2021-12-10 11:51:00,366 [INFO] RetryExec:113 - Retrying request to {}->http://sw-center.st.com:80
+2021-12-10 11:51:01,011 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
