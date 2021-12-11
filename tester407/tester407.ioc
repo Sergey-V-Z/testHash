@@ -1,7 +1,7 @@
 #MicroXplorer Configuration settings - do not modify
 FREERTOS.FootprintOK=true
 FREERTOS.IPParameters=Tasks01,FootprintOK,configUSE_NEWLIB_REENTRANT
-FREERTOS.Tasks01=testTask,0,256,TestTask,Default,NULL,Dynamic,NULL,NULL;lcdTask,0,256,LCDTask,Default,NULL,Dynamic,NULL,NULL;I2C_Task,0,256,i2c_Task,Default,NULL,Dynamic,NULL,NULL;buttonTask,0,128,ButtonTask,Default,NULL,Dynamic,NULL,NULL
+FREERTOS.Tasks01=testTask,0,256,TestTask,Default,NULL,Dynamic,NULL,NULL;lcdTask,0,512,LCDTask,Default,NULL,Dynamic,NULL,NULL;I2C_Task,0,256,i2c_Task,Default,NULL,Dynamic,NULL,NULL;buttonTask,0,128,ButtonTask,Default,NULL,Dynamic,NULL,NULL
 FREERTOS.configUSE_NEWLIB_REENTRANT=1
 File.Version=6
 GPIO.groupedBy=Group By Peripherals
@@ -110,8 +110,9 @@ PC11.GPIO_Label=B3
 PC11.GPIO_PuPd=GPIO_PULLUP
 PC11.Locked=true
 PC11.Signal=GPIO_Input
-PC12.GPIOParameters=GPIO_Label
+PC12.GPIOParameters=GPIO_PuPd,GPIO_Label
 PC12.GPIO_Label=PLUG
+PC12.GPIO_PuPd=GPIO_PULLDOWN
 PC12.Locked=true
 PC12.Signal=GPIO_Input
 PC6.Mode=Asynchronous

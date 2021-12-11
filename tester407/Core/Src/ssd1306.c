@@ -177,9 +177,14 @@ void ssd1306_Fill(SSD1306_COLOR color) {
     /* Set memory */
     uint32_t i;
 
-    for(i = 0; i < sizeof(SSD1306_Buffer); i++) {
-        SSD1306_Buffer[i] = (color == Black) ? 0x00 : 0xFF;
+    taskENTER_CRITICAL();
+    {
+		for(i = 0; i < sizeof(SSD1306_Buffer); i++) {
+			SSD1306_Buffer[i] = (color == Black) ? 0x00 : 0xFF;
+		}
     }
+    taskEXIT_CRITICAL();
+
 }
 
 // Write the screenbuffer with changed to the screen
@@ -210,12 +215,17 @@ void ssd1306_DrawPixel(uint8_t x, uint8_t y, SSD1306_COLOR color) {
         return;
     }
    
-    // Draw in the right color
-    if(color == White) {
-        SSD1306_Buffer[x + (y / 8) * SSD1306_WIDTH] |= 1 << (y % 8);
-    } else { 
-        SSD1306_Buffer[x + (y / 8) * SSD1306_WIDTH] &= ~(1 << (y % 8));
+    taskENTER_CRITICAL();
+    {
+	   // Draw in the right color
+		if(color == White) {
+			SSD1306_Buffer[x + (y / 8) * SSD1306_WIDTH] |= 1 << (y % 8);
+		} else {
+			SSD1306_Buffer[x + (y / 8) * SSD1306_WIDTH] &= ~(1 << (y % 8));
+		}
     }
+    taskEXIT_CRITICAL();
+
 }
 
 // Draw 1 char to the screen buffer

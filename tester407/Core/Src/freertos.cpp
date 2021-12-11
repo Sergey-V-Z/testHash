@@ -188,52 +188,105 @@ void TestTask(void const * argument)
 			HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_SET);
 			osDelay(1200);
 
-			//цикл опроса
-			while (start) {
 
-				//сброс асиков
-				HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_RESET);
-				osDelay(500);
-				HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_SET);
-				osDelay(500);
+			if(start == 1 ){
+				//цикл опроса
+				while (start) {
 
+					//сброс асиков
+					HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_RESET);
+					osDelay(500);
+					HAL_GPIO_WritePin(RST_ASIC_GPIO_Port, RST_ASIC_Pin, GPIO_PIN_SET);
+					osDelay(500);
+
+					status_uart = HAL_UART_Receive_IT(&huart6, readASIC, 1);
+					status_uart = HAL_UART_Transmit(&huart1, cmdASIC, 7, 20);
+
+					//запускаем таймер
+					status_uartTIM = 1;
+					// ожидать таймаута по уарту
+					while(uartTIM < timeOutUART){
+						osDelay(1);
+					}
+					uartTIM = 0;
+					status_uartTIM = 0;
+
+					// все данные пришли отключаем уарт
+					HAL_UART_AbortReceive(&huart6);
+
+					//проверить пришедшие данные сравненией с шаблоном
+
+					//посчитать количесво асиков
+
+					pre_count_ASIC = counter_bytes / 9;
+					if(!start){
+						pre_count_ASIC = 0;
+					}
+					//itoa(pre_count_ASIC, (char*)snum, 10);
+					sprintf((char*)snum, "%-2d", (int)pre_count_ASIC);
+
+					//ssd1306_Fill(Black); //чистим экран
+				    ssd1306_SetCursor(2, 28);
+				    ssd1306_WriteString((char*)snum, Font_11x18, White);
+				    //ssd1306_UpdateScreen();
+
+					counter_bytes = 0;
+					memset(readASIC, 0, sizeof readASIC);
+
+					//включить индикатор готовности данных
+					ssd1306_DrawCircle(50, 56, 2, White);
+					osDelay(200);
+					//выключить индикатор
+					ssd1306_DrawCircle(50, 56, 2, Black);
+
+				}
+
+			}else if(start == 2){
 				status_uart = HAL_UART_Receive_IT(&huart6, readASIC, 1);
-				status_uart = HAL_UART_Transmit(&huart1, cmdASIC, 7, 20);
+				//цикл опроса
+				while (start) {
 
-				//запускаем таймер
-				status_uartTIM = 1;
-				// ожидать таймаута по уарту
-				while(uartTIM < timeOutUART){
-					osDelay(1);
+
+					status_uart = HAL_UART_Transmit(&huart1, cmdASIC, 7, 20);
+
+					//запускаем таймер
+					uartTIM = 0;
+					status_uartTIM = 1;
+					// ожидать таймаута по уарту
+					while(uartTIM < timeOutUART){
+						osDelay(1);
+					}
+					uartTIM = 0;
+					status_uartTIM = 0;
+
+					//проверить пришедшие данные сравненией с шаблоном
+
+					//посчитать количесво асиков
+
+					pre_count_ASIC = counter_bytes / 9;
+					if(!start){
+						pre_count_ASIC = 0;
+					}
+					sprintf((char*)snum, "%-2d", (int)pre_count_ASIC);
+
+				    ssd1306_SetCursor(2, 28);
+				    ssd1306_WriteString((char*)snum, Font_11x18, White);
+
+					counter_bytes = 0;
+					memset(readASIC, 0, sizeof readASIC);
+
+					//включить индикатор готовности данных
+					ssd1306_DrawCircle(50, 56, 2, White);
+					osDelay(300);
+					//выключить индикатор
+					ssd1306_DrawCircle(50, 56, 2, Black);
+
+
+
 				}
-				uartTIM = 0;
-				status_uartTIM = 0;
-
-				// все данные пришли отключаем уарт
-				HAL_UART_AbortReceive(&huart6);
-
-				//проверить пришедшие данные сравненией с шаблоном
-
-				//посчитать количесво асиков
-
-				pre_count_ASIC = counter_bytes / 9;
-				if(!start){
-					pre_count_ASIC = 0;
-				}
-				//itoa(pre_count_ASIC, (char*)snum, 10);
-				sprintf((char*)snum, "%-2d", (int)pre_count_ASIC);
-
-				//ssd1306_Fill(Black); //чистим экран
-			    ssd1306_SetCursor(2, 28);
-			    ssd1306_WriteString((char*)snum, Font_11x18, White);
-			    //ssd1306_UpdateScreen();
-
-				counter_bytes = 0;
-				memset(readASIC, 0, sizeof readASIC);
-
-				osDelay(200);
 
 			}
+
 
 	}
 	osDelay(1);
@@ -340,7 +393,7 @@ void i2c_Task(void const * argument)
 
 	  if (start && plug) {
 					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_1, 6, 20);
-					osDelay(200);
+					osDelay(410);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_1[0], 1, 20);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_1[1], 1, 20);
 					//проверить ответ
@@ -349,14 +402,14 @@ void i2c_Task(void const * argument)
 						ready = 0;
 						ssd1306_Fill(Black); //чистим экран
 					    ssd1306_SetCursor(2, 0);
-					    ssd1306_WriteString((char*) "error", Font_7x10, White);
+					    ssd1306_WriteString((char*) "error1", Font_7x10, White);
 					    //ssd1306_UpdateScreen();
 						continue;
 					}
-					osDelay(300);
+					osDelay(710);
 
 					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_2, 6, 20);
-					osDelay(200);
+					osDelay(110);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_2[0], 1, 20);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_2[1], 1, 20);
 					//проверить ответ
@@ -365,14 +418,14 @@ void i2c_Task(void const * argument)
 						ready = 0;
 						ssd1306_Fill(Black); //чистим экран
 					    ssd1306_SetCursor(2, 0);
-					    ssd1306_WriteString((char*) "error", Font_7x10, White);
+					    ssd1306_WriteString((char*) "error2", Font_7x10, White);
 					    //ssd1306_UpdateScreen();
 						continue;
 					}
-					osDelay(1000);
+					osDelay(2200);
 
 					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_3, 9, 20);
-					osDelay(100);
+					osDelay(110);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_3[0], 1, 20);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_3[1], 1, 20);
 					//проверить ответ
@@ -381,14 +434,14 @@ void i2c_Task(void const * argument)
 						ready = 0;
 						ssd1306_Fill(Black); //чистим экран
 					    ssd1306_SetCursor(2, 0);
-					    ssd1306_WriteString((char*) "error", Font_7x10, White);
+					    ssd1306_WriteString((char*) "error3", Font_7x10, White);
 					    //ssd1306_UpdateScreen();
 						continue;
 					}
-					osDelay(1000);
+					osDelay(710);
 
 					status_i2c = HAL_I2C_Master_Transmit(&hi2c1, addr, cmdStart_4, 7, 20);
-					osDelay(710);
+					osDelay(30);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_4[0], 1, 20);
 					status_i2c = HAL_I2C_Master_Receive(&hi2c1, addr, &cmdRead_4[1], 1, 20);
 					//проверить ответ
@@ -397,7 +450,7 @@ void i2c_Task(void const * argument)
 						ready = 0;
 						ssd1306_Fill(Black); //чистим экран
 					    ssd1306_SetCursor(2, 0);
-					    ssd1306_WriteString((char*) "error", Font_7x10, White);
+					    ssd1306_WriteString((char*) "error4", Font_7x10, White);
 					    //ssd1306_UpdateScreen();
 						continue;
 					}
@@ -477,20 +530,17 @@ void ButtonTask(void const * argument)
   for(;;)
   {
 	button1.tick();
-	//button2.tick();
-	//button3.tick();
+	button2.tick();
+	button3.tick();
 
 	if (button1.isClick() ){
 		if (start == 0 && plug == GPIO_PIN_SET) {
 			start = 1;
-			//ssd1306_Fill(Black); //чистим экран
 			ssd1306_SetCursor(2, 0);
 			ssd1306_WriteString((char*) "Test started   ", Font_7x10, White);
-			//ssd1306_UpdateScreen();
 
-		}else if(start == 1 && plug == GPIO_PIN_SET){
+		}else if(start >= 1 && plug == GPIO_PIN_SET){
 			start = 0;
-			//ssd1306_Fill(Black); //чистим экран
 			ssd1306_SetCursor(2, 0);
 			ssd1306_WriteString((char*) "Test stoped     ", Font_7x10, White);
 
@@ -498,13 +548,32 @@ void ButtonTask(void const * argument)
 		    ssd1306_SetCursor(2, 28);
 		    ssd1306_WriteString((char*)snum, Font_11x18, White);
 
-			//ssd1306_UpdateScreen();
 		}else {
 			start = 0;
-			//ssd1306_Fill(Black); //чистим экран
 			ssd1306_SetCursor(2, 0);
 			ssd1306_WriteString((char*) "No plug        ", Font_7x10, White);
-			//ssd1306_UpdateScreen();
+		}
+
+	}
+	if (button2.isClick() ){
+		if (start == 0 && plug == GPIO_PIN_SET) {
+			start = 2;
+			ssd1306_SetCursor(2, 0);
+			ssd1306_WriteString((char*) "Test2 started   ", Font_7x10, White);
+
+		}else if(start >= 1 && plug == GPIO_PIN_SET){
+			start = 0;
+			ssd1306_SetCursor(2, 0);
+			ssd1306_WriteString((char*) "Test stoped     ", Font_7x10, White);
+
+			sprintf((char*)snum, "%-2d", 0);
+		    ssd1306_SetCursor(2, 28);
+		    ssd1306_WriteString((char*)snum, Font_11x18, White);
+
+		}else {
+			start = 0;
+			ssd1306_SetCursor(2, 0);
+			ssd1306_WriteString((char*) "No plug        ", Font_7x10, White);
 		}
 
 	}
