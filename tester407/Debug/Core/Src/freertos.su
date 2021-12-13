@@ -1,7 +1,7 @@
-freertos.cpp:105:6:void vApplicationGetIdleTaskMemory(StaticTask_t**, StackType_t**, uint32_t*)	24	static
-freertos.cpp:119:6:void MX_FREERTOS_Init()	128	static
-freertos.cpp:170:6:void TestTask(const void*)	40	static
-freertos.cpp:304:6:void LCDTask(const void*)	24	static
-freertos.cpp:354:6:void i2c_Task(const void*)	112	static
-freertos.cpp:516:6:void ButtonTask(const void*)	120	static
-freertos.cpp:587:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	16	static
+freertos.cpp:106:6:void vApplicationGetIdleTaskMemory(StaticTask_t**, StackType_t**, uint32_t*)	24	static
+freertos.cpp:120:6:void MX_FREERTOS_Init()	128	static
+freertos.cpp:171:6:void TestTask(const void*)	40	static
+freertos.cpp:305:6:void LCDTask(const void*)	24	static
+freertos.cpp:355:6:void i2c_Task(const void*)	112	static
+freertos.cpp:517:6:void ButtonTask(const void*)	120	static
+freertos.cpp:604:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	16	static

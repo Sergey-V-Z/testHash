@@ -56,6 +56,7 @@ extern I2C_HandleTypeDef hi2c3;
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart6;
 extern TIM_HandleTypeDef htim14;
+extern TIM_HandleTypeDef htim4;
 
 HAL_StatusTypeDef status_i2c;
 HAL_StatusTypeDef status_uart;
@@ -143,7 +144,7 @@ void MX_FREERTOS_Init(void) {
   testTaskHandle = osThreadCreate(osThread(testTask), NULL);
 
   /* definition and creation of lcdTask */
-  osThreadDef(lcdTask, LCDTask, osPriorityNormal, 0, 256);
+  osThreadDef(lcdTask, LCDTask, osPriorityNormal, 0, 512);
   lcdTaskHandle = osThreadCreate(osThread(lcdTask), NULL);
 
   /* definition and creation of I2C_Task */
@@ -521,11 +522,14 @@ void ButtonTask(void const * argument)
 	RV_BUTTON button2(B2_GPIO_Port, B2_Pin, HIGH_PULL, NORM_OPEN);
 	RV_BUTTON button3(B3_GPIO_Port, B3_Pin, HIGH_PULL, NORM_OPEN);
 	uint8_t snum[5];
+	uint8_t fan = 0;
 
 	button1.isClick();
 	button2.isClick();
 	button3.isClick();
 
+	htim4.Instance->CCR3 = 0;
+	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
   /* Infinite loop */
   for(;;)
   {
@@ -577,6 +581,19 @@ void ButtonTask(void const * argument)
 		}
 
 	}
+
+	if (button3.isClick() ){
+		//HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
+		if(fan){
+			fan = 0;
+			htim4.Instance->CCR3 = ((htim4.Instance->ARR*1000/100)*30)/1000;
+		}else{
+			fan = 1;
+			htim4.Instance->CCR3 = 0;
+		}
+	}
+
+
     osDelay(1);
   }
   /* USER CODE END ButtonTask */
