@@ -1,10 +1,10 @@
-20:01:40 **** Incremental Build of configuration Debug for project tester407 ****
-make -j8 all 
+15:21:21 **** Incremental Build of configuration Debug for project tester407 ****
+make -j6 all 
 arm-none-eabi-size   tester407.elf 
    text	   data	    bss	    dec	    hex	filename
   47292	    140	  43092	  90524	  1619c	tester407.elf
 Finished building: default.size.stdout
  
 
-20:01:40 Build Finished. 0 errors, 0 warnings. (took 314ms)
+15:21:22 Build Finished. 0 errors, 0 warnings. (took 809ms)
 
