@@ -2139,6 +2139,8 @@ IEclipsePreferences#org-eclipse-ui-workbench {
 		'org.eclipse.cdt.ui.methodDeclarationHighlighting=255,255,255'
 		'org.eclipse.cdt.ui.methodHighlighting=255,255,255'
 		'org.eclipse.cdt.ui.namespaceHighlighting=255,255,255'
+		'org.eclipse.cdt.ui.outline.mark.dividercolor=46,52,56'
+		'org.eclipse.cdt.ui.outline.mark.textcolor=165,175,182'
 		'org.eclipse.cdt.ui.overloadedOperatorHighlighting=255,210,0'
 		'org.eclipse.cdt.ui.parameterVariableHighlighting=255,255,255'
 		'org.eclipse.cdt.ui.pp_default=255,255,255'

@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=GND_ISO Pin=D1-4
+Removed Pin From Net: NetName=+5v_ISO Pin=D1-6
+Change Component Designator: OldDesignator=l NewDesignator=R16
+Change Component Description : Designator=Q3 Old Description=RoHS Compliant New Description=RoHS Compliant | Low RDS(on) | Industry-leading quality | Dynamic dv/dt Rating | Fast Switching | Fully Avalanche Rated | 175C Operating Temperature | P-Channel MOSFET 
+Added Pin To Net: NetName=+3.3v Pin=C18-2
+Added Pin To Net: NetName=+3.3v Pin=U3-21
+Added Pin To Net: NetName=+3.3v Pin=U3-22
